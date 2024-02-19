@@ -1,0 +1,3 @@
+Spanish: Notebook desglosando paso a paso todos los procesos para entrenar un modelo que clasifique las imágenes en gato o perro, desde la instalación de los paquetes necesarios hasta la evaluación y visualización de los resultados. Se utilizaron las bibliotecas Pyspark, Pillow y Numpy y se ejecutó en el entorno de GoogleColab.
+
+English: Notebook breaking down step by step all the processes to train a model that classifies the images into cat or dog, from the installation of the necessary packages to the evaluation and visualization of the results. The Pyspark, Pillow and Numpy libraries were used and it was run in the GoogleColab environment.
