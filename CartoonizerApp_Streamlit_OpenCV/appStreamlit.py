@@ -23,6 +23,7 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
+imgurl = requests.get(https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true)
 set_background('background.png')
 
 # Insertar múltiples espacios en blanco para separar visualmente
