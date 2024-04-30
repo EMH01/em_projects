@@ -2,7 +2,7 @@ import base64
 import streamlit as st
 import cv2
 import numpy as np
-from app import image_to_cartoon
+from cartooonizer import image_to_cartoon
 
 # # Para incrustar imagen directamente en html: leer archivo binario y convertirlo en cadena Based64
 def get_base64(bin_file):
