@@ -5,6 +5,7 @@ Por otro lado, en el archivo cartoonizer.py es en donde se configura la página,
 el archivo anterior. Para probar la ejecución de la página creada en el servidor local, se ejecuta en la terminal `/ruta-ubicacion-archivo/streamlit run cartoonizer.py`
 y para desplegarla se utiliza Streamlit/Cloud.
   Instalar para el desarrollo: streamlit, numpy, cv2
+  
 English:
 Simple web application, developed with Streamlit, with the main functionality of giving a drawing effect to an image.
 This task to modify the image is performed using OpenCV, in the file app.py .
