@@ -24,7 +24,9 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 imgurl = requests.get(https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true)
-set_background('background.png')
+background = cv2.imdecode(np.fromstring(imgurl.read(), np.uint8), cv2.IMREAD_COLOR)
+background = cv2.cvtColor(background, cv2.COLOR_RGB2BGR)   # convertir a formato BGR
+set_background(background)
 
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
