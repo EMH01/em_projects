@@ -11,7 +11,7 @@ def is_mobile():
 # Seleccionar el fondo dependiendo del dispositivo
 if is_mobile():
     background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true"
-    background_size = "100%"
+    background_size = "100% 100%"
 else:
     background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"
     background_size = "cover"
