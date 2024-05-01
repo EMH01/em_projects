@@ -3,23 +3,6 @@ import cv2
 import numpy as np
 from cartoonizer import image_to_cartoon
 
-# Definir el estilo del contenedor principal para hacerlo adaptable
-st.markdown("""
-    <style>
-        .main-container {
-            max-width: 800px; /* Ancho máximo del contenedor */
-            margin: auto; /* Centrar el contenedor */
-            padding: 20px; /* Espaciado interno */
-        }
-        img {
-            max-width: 100%; /* Hacer las imágenes responsivas */
-            height: auto;
-        }
-    </style>
-""", unsafe_allow_html=True)
-# Renderizar el contenedor principal
-st.markdown('<div class="main-container">', unsafe_allow_html=True)
-
 page_bg_img = f'''
 <style>
 .stApp {{
@@ -87,6 +70,4 @@ with tab2:
                             key = 2,
                             mime="image/jpeg"
         )
-# Cerrar el contenedor principal
-st.markdown('</div>', unsafe_allow_html=True)
         
