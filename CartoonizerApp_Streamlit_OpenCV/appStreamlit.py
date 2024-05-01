@@ -3,16 +3,6 @@ import cv2
 import numpy as np
 from cartoonizer import image_to_cartoon
 
-# Definir el tema personalizado
-custom_theme = {
-    "primaryColor": "#FFFFFF",  # Color principal (blanco en este caso)
-    "textColor": "#FFFFFF",  # Color del texto (blanco en este caso)
-    "font": "sans-serif"
-}
-
-# Aplicar el tema personalizado
-st.set_page_config(page_title="", layout="wide", theme=custom_theme)
-
 # Se utiliza html por ausencia de ajustes avanzados en streamlit
 page_bg_img = f'''
     <style>
