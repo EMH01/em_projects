@@ -28,6 +28,18 @@ st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
 
 # Crear las pestañas y asignarlas a variables individuales
 tab1, tab2 = st.tabs(["Upload image", "Take a photo"])
+# Estilo para el color del texto en todas las pestañas
+st.markdown(
+    """
+    <style>
+        /* Estilo para el color del texto */
+        .tab-content {
+            color: white !important; /* Color del texto blanco */
+        }
+    </style>
+    """, 
+    unsafe_allow_html=True
+)
 
 def toCartoon_and_show(img):
     cartoon = image_to_cartoon(img)
