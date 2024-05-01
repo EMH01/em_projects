@@ -23,17 +23,6 @@ page_bg_img = f'''
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-st.markdown(
-    """
-    <style>
-    body {
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
 
