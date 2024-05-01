@@ -19,7 +19,7 @@ page_bg_img = f'''
 <style>
 .stApp {{
 background-image: url("{background_url}");
-background-size: cover;
+background-size: 100% 100%;
 }}
 </style>
 '''
