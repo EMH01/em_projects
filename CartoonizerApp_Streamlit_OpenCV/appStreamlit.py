@@ -11,18 +11,16 @@ def get_base64(bin_file):
     return base64.b64encode(data).decode()
 
 # # Se trabaja con html para manejos de estilos mas avanzados
-def set_background(image_url):
-    page_bg_img = f'''
-    <style>
-    .stApp {{
-    background-image: url("{image_url}");
-    background-size: cover;
-    }}
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true")
+page_bg_img = f'''
+<style>
+.stApp {{
+background-image: url("{"https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"}");
+background-size: cover;
+}}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
