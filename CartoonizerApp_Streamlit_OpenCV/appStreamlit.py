@@ -39,17 +39,6 @@ def toCartoon_and_show(img):
 
 # Subir archivo
 with tab1:
-    st.markdown(
-        """
-        <style>
-            /* Estilo para el color del texto en la primera pestaña */
-            .stMarkdown {
-                color: white !important; /* Color del texto blanco */
-            }
-        </style>
-        """, 
-        unsafe_allow_html=True
-    )
     fl = st.file_uploader(
         label = "Upload your image here"
     )
@@ -74,17 +63,6 @@ with tab1:
             st.stop()
     
 with tab2:
-    st.markdown(
-        """
-        <style>
-            /* Estilo para el color del texto en la primera pestaña */
-            .stMarkdown {
-                color: white !important; /* Color del texto blanco */
-            }
-        </style>
-        """, 
-        unsafe_allow_html=True
-    )
     # Si la pestaña "Take It" está seleccionada
     picture = st.camera_input("Take a pic")
         # Mostrar la imagen capturada
