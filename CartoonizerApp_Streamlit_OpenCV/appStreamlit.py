@@ -11,22 +11,18 @@ def get_base64(bin_file):
     return base64.b64encode(data).decode()
 
 # # Se trabaja con html para manejos de estilos mas avanzados
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
+def set_background(image_url):
+    page_bg_img = f'''
     <style>
-    .stApp {
-    background-image: url("data:image/png;base64,%s");
+    .stApp {{
+    background-image: url("{image_url}");
     background-size: cover;
-    }
+    }}
     </style>
-    ''' % bin_str
+    '''
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-imgurl = requests.get(https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true)
-background = cv2.imdecode(np.fromstring(imgurl.read(), np.uint8), cv2.IMREAD_COLOR)
-background = cv2.cvtColor(background, cv2.COLOR_RGB2BGR)   # convertir a formato BGR
-set_background(background)
+set_background("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true")
 
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
