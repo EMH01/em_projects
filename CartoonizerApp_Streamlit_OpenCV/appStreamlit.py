@@ -8,6 +8,7 @@ page_bg_img = f'''
     <style>
     .stApp {{
         background-image: url("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true");
+        background-size: 100% 100%;
         background-position: center;
         background-attachment: fixed;
     }}
