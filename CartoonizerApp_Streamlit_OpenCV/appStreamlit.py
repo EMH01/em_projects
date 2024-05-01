@@ -7,7 +7,7 @@ from cartoonizer import image_to_cartoon
 # Función para detectar si el dispositivo es móvil o no
 def is_mobile():
     return "config" not in st.session_state
-
+background_url = ""
 # Seleccionar el fondo dependiendo del dispositivo
 if is_mobile():
     background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true"
@@ -19,7 +19,6 @@ page_bg_img = f'''
 <style>
 .stApp {{
 background-image: url("{background_url}");
-background_size = "100% 100%";
 }}
 </style>
 '''
