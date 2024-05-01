@@ -6,19 +6,28 @@ from cartoonizer import image_to_cartoon
 # Función para detectar si el dispositivo es móvil o no
 def is_mobile():
     return "config" not in st.session_state
-# Seleccionar el fondo dependiendo del dispositivo
-background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true" if is_mobile() else "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"
-background_size =  " auto auto" if is_mobile() else " 100% 100%"
+    
 # Se utiliza html por ausencia de ajustes avanzados en streamlit
-page_bg_img = f'''
-<style>
-.stApp {{
-background-image: url("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true");
-background-size: {background_size};
-}}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+if is_mobile():
+    page_bg_img = f'''
+    <style>
+    .stApp {{
+    background-image: url("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true");
+    background-size: cover;
+    }}
+    </style>
+    '''
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+else:
+    page_bg_img = f'''
+    <style>
+    .stApp {{
+    background-image: url("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true");
+    background-size: 100% 100%;
+    }}
+    </style>
+    '''
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
