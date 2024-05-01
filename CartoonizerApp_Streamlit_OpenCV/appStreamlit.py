@@ -1,16 +1,24 @@
-import base64
 import streamlit as st
 import cv2
 import numpy as np
 from cartoonizer import image_to_cartoon
 
-# # Para incrustar imagen directamente en html: leer archivo binario y convertirlo en cadena Based64
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-# # Se trabaja con html para manejos de estilos mas avanzados
+# Definir el estilo del contenedor principal para hacerlo adaptable
+st.markdown("""
+    <style>
+        .main-container {
+            max-width: 800px; /* Ancho máximo del contenedor */
+            margin: auto; /* Centrar el contenedor */
+            padding: 20px; /* Espaciado interno */
+        }
+        img {
+            max-width: 100%; /* Hacer las imágenes responsivas */
+            height: auto;
+        }
+    </style>
+""", unsafe_allow_html=True)
+# Renderizar el contenedor principal
+st.markdown('<div class="main-container">', unsafe_allow_html=True)
 
 page_bg_img = f'''
 <style>
@@ -79,5 +87,6 @@ with tab2:
                             key = 2,
                             mime="image/jpeg"
         )
-
+# Cerrar el contenedor principal
+st.markdown('</div>', unsafe_allow_html=True)
         
