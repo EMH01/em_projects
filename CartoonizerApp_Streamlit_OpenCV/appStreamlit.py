@@ -3,31 +3,26 @@ import cv2
 import numpy as np
 from cartoonizer import image_to_cartoon
 
-# Función para detectar si el dispositivo es móvil o no
-def is_mobile():
-    return "config" not in st.session_state
-    
+st.markdown(
+        """
+        <style>
+        @media only screen and (max-width: 600px) {
+            body {
+                background-image: url('https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png');
+                background-size: cover;
+            }
+        }
+        @media only screen and (min-width: 601px) {
+            body {
+                background-image: url('https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true');
+                background-size:  100% 100%;
+            }
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )   
 # Se utiliza html por ausencia de ajustes avanzados en streamlit
-if is_mobile():
-    page_bg_img = f'''
-    <style>
-    .stApp {{
-    background-image: url("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true");
-    background-size: cover;
-    }}
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-else:
-    page_bg_img = f'''
-    <style>
-    .stApp {{
-    background-image: url("https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true");
-    background-size: 100% 100%;
-    }}
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
