@@ -39,7 +39,7 @@ def toCartoon_and_show(img):
 
 # Subir archivo
 with tab1:
- st.markdown(
+    st.markdown(
         """
         <style>
             /* Estilo para el color del texto en la primera pestaña */
@@ -74,7 +74,7 @@ with tab1:
             st.stop()
     
 with tab2:
- st.markdown(
+    st.markdown(
         """
         <style>
             /* Estilo para el color del texto en la primera pestaña */
