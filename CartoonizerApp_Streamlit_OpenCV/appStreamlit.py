@@ -28,18 +28,6 @@ st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
 
 # Crear las pestañas y asignarlas a variables individuales
 tab1, tab2 = st.tabs(["Upload image", "Take a photo"])
-# Estilo para el color del texto en todas las pestañas
-st.markdown(
-    """
-    <style>
-        /* Estilo para el color del texto */
-        .tab-content {
-            color: white !important; /* Color del texto blanco */
-        }
-    </style>
-    """, 
-    unsafe_allow_html=True
-)
 
 def toCartoon_and_show(img):
     cartoon = image_to_cartoon(img)
@@ -51,6 +39,17 @@ def toCartoon_and_show(img):
 
 # Subir archivo
 with tab1:
+ st.markdown(
+        """
+        <style>
+            /* Estilo para el color del texto en la primera pestaña */
+            .stMarkdown {
+                color: white !important; /* Color del texto blanco */
+            }
+        </style>
+        """, 
+        unsafe_allow_html=True
+    )
     fl = st.file_uploader(
         label = "Upload your image here"
     )
@@ -75,6 +74,17 @@ with tab1:
             st.stop()
     
 with tab2:
+ st.markdown(
+        """
+        <style>
+            /* Estilo para el color del texto en la primera pestaña */
+            .stMarkdown {
+                color: white !important; /* Color del texto blanco */
+            }
+        </style>
+        """, 
+        unsafe_allow_html=True
+    )
     # Si la pestaña "Take It" está seleccionada
     picture = st.camera_input("Take a pic")
         # Mostrar la imagen capturada
