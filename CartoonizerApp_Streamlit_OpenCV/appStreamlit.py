@@ -11,15 +11,17 @@ def is_mobile():
 # Seleccionar el fondo dependiendo del dispositivo
 if is_mobile():
     background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true"
+    background_size = "100%"
 else:
     background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"
+    background_size = "cover"
 
 # Establecer el estilo con el fondo seleccionado
 page_bg_img = f'''
 <style>
 .stApp {{
 background-image: url("{background_url}");
-background_size = "auto 100%";
+background_size = "{background_size}";
 }}
 </style>
 '''
