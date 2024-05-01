@@ -4,11 +4,22 @@ import numpy as np
 from cartoonizer import image_to_cartoon
 
 # Se utiliza html por ausencia de ajustes avanzados en streamlit
+# Función para detectar si el dispositivo es móvil o no
+def is_mobile():
+    return "config" not in st.session_state
+
+# Seleccionar el fondo dependiendo del dispositivo
+if is_mobile():
+    background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true"
+else:
+    background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"
+
+# Establecer el estilo con el fondo seleccionado
 page_bg_img = f'''
 <style>
 .stApp {{
-background-image: url("{"https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"}");
-background-size: 100% 100%;
+background-image: url("{background_url}");
+background-size: cover;
 }}
 </style>
 '''
