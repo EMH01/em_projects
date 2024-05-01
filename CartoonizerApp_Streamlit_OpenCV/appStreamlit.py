@@ -8,7 +8,7 @@ def is_mobile():
     return "config" not in st.session_state
 # Seleccionar el fondo dependiendo del dispositivo
 background_url = "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background_movil.png?raw=true" if is_mobile() else "https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"
-background_size =  " 100% 80%" if is_mobile() else " 100% 100%"
+background_size =  " 100% auto" if is_mobile() else " 100% 100%"
 # Se utiliza html por ausencia de ajustes avanzados en streamlit
 page_bg_img = f'''
 <style>
