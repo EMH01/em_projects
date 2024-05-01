@@ -4,31 +4,16 @@ import numpy as np
 from cartoonizer import image_to_cartoon
 
 # Se utiliza html por ausencia de ajustes avanzados en streamlit
-# Establecer el tamaño de la imagen de fondo en función del ancho de la pantalla
 page_bg_img = f'''
 <style>
 .stApp {{
 background-image: url("{"https://github.com/EMH01/em_projects/blob/main/CartoonizerApp_Streamlit_OpenCV/background.png?raw=true"}");
-background-size: cover;
+background-size: 100% 100%;
 }}
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# Asegurar que el contenido sea desplazable para dispositivos móviles
-st.markdown(
-    """
-    <style>
-    .css-1l02zno {{
-        position: relative;
-        width: auto;
-        max-width: 100%;
-        overflow-x: auto;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
