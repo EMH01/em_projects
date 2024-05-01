@@ -14,7 +14,6 @@ background-size: 100% 100%;
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-
 # Insertar múltiples espacios en blanco para separar visualmente
 st.markdown("<br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
 
