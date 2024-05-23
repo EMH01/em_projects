@@ -1,7 +1,7 @@
 from openai import OpenAI
 import streamlit as st
 from streamlit_chat import message  # es para desplegar chat de mensajes con avatares
-import os #para acceder a la variable de entorno local
+#import os #para acceder a la variable de entorno local
 
 st.title("Assiend: Your assistant and friend")
 
@@ -17,8 +17,9 @@ if "messages" not in st.session_state: # si el historial esta vacio, mandar el p
     st.session_state["messages"] = [{"role": "assistant", "content": "Hi I'm your personal assistant chatbot ¿What can I do for you today?"}]
 
 # Crear instancia del cliente de OpenAI
-# client = OpenAI(api_key=open('apikey.txt').read())
-client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
+# client = OpenAI(api_key=open('apikey.txt').read()) #usando la clave desde un txt
+# client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY')) #usando la clave desde v.entorno local
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"]) # usando la clave desde v.entorno en streamlit secrets
 
 # Definir avatares de los roles del chat segun los avatares predefinidos en streamlit_chat
 avatar = {
