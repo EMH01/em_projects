@@ -1,7 +1,7 @@
 from openai import OpenAI
 import streamlit as st
 from streamlit_chat import message  # es para desplegar chat de mensajes con avatares
-import os #para acceder a la variable de entorno
+import os #para acceder a la variable de entorno local
 
 st.title("Assiend: Your assistant and friend")
 
