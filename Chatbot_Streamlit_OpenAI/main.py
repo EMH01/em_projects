@@ -11,7 +11,7 @@ from sumyNLP import summarize, split_text, summarize_text
 # Para hacerlo desde el servidor local se le pueden pasar directamente por parametro
 @st.cache_resource
 def conectDB()-> Client:
-  return create_client(st.secrets["connections"]["supabase"]["SUPABASE_URL"], st.secrets["connections"]["supabase"]["SUPABASE_KEY"])
+  return create_client(st.secrets["SUPABASE_URL"], st.secrets["SUPABASE_KEY"])
 
 def login_page():
   client = login_form()
@@ -122,7 +122,7 @@ def main_page():
   # Crear instancia del cliente de OpenAI
   # client = OpenAI(api_key=open('apikey.txt').read()) # usando la clave desde archivo de texto
   # client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))  # usando la clave desde v.entorno local
-  client = OpenAI(api_key=st.secrets["keys"]["OPENAI_API_KEY"]) # usando la clave desde v.entorno en streamlit secrets
+  client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"]) # usando la clave desde v.entorno en streamlit secrets
 
   # Definir avatares de los roles del chat segun los avatares predefinidos en streamlit_chat
   avatar = {
