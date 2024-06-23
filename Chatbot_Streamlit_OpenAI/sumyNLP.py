@@ -24,7 +24,7 @@ def load_stop_words(file_path):
 
 def get_custom_stop_words(language):
     if language == "es":
-        return load_stop_words('spanish.txt')
+        return load_stop_words('/mount/src/em_projects/Chatbot_Streamlit_OpenAI/spanish.txt')
     else:  # Para inglés 
         return load_stop_words('/mount/src/em_projects/Chatbot_Streamlit_OpenAI/english.txt')
     
