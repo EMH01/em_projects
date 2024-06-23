@@ -14,11 +14,16 @@ def conectDB()-> Client:
   return create_client(st.secrets["SUPABASE_URL"], st.secrets["SUPABASE_KEY"])
 
 def login_page():
-  client = login_form()
-  if st.session_state["authenticated"]:
-    if "messages" in st.session_state: del st.session_state["messages"]
-    st.rerun()  # Redireccionar a la página principal una vez autenticado
-
+  try:
+        client = login_form()
+        if st.session_state["authenticated"]:
+            if "messages" in st.session_state:
+                del st.session_state["messages"]
+            st.rerun()  # Redireccionar a la página principal una vez autenticado
+    except Exception as e:
+        st.error("An error occurred during login. Please try again later.")
+        st.write(f"Original Exception: {str(e)}")
+      
 # Función para eliminar la cuenta
 def delete_form():
   client = conectDB()
