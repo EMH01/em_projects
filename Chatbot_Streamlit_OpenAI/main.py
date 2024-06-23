@@ -28,9 +28,9 @@ def delete_form():
     password = st.text_input("Enter your password", type="password")
     confirm = st.form_submit_button("Delete account")
     if confirm:
-      response = client.table("users").select("name, psw").eq("name", username).eq("psw", password).execute()
+      response = client.table("users").select("username, password").eq("username", username).eq("password", password).execute()
       if len(response.data) > 0:
-        client.table("users").delete().eq("name", username).eq("psw", password).execute()
+        client.table("users").delete().eq("username", username).eq("password", password).execute()
         st.success("Account deleted successfully.")
         st.session_state["authenticated"] = False
         st.session_state["username"] = None
