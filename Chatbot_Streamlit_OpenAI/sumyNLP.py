@@ -3,6 +3,7 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 from sumy.nlp.stemmers import Stemmer
 from langdetect import detect
+import nltk
 
 # Descargar recursos de NLTK si no están presentes
 def download_nltk_resources():
