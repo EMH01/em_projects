@@ -170,6 +170,7 @@ def main_page():
     response = client.chat.completions.create(model="gpt-3.5-turbo",messages=ask,max_tokens=400,temperature=1.0)
     msg = response.choices[0].message.content
     st.session_state.messages.append({'role': 'assistant', 'content': msg})
+    if username: save_message(username, "assistant", msg)
     del st.session_state["file"]
 
   # Enviar todos los mensajes al modelo y actualizar el historial de mensajes
