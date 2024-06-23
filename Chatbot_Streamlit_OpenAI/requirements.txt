@@ -6,3 +6,4 @@ supabase
 PyMuPDF
 sumy
 langdetect
+nltk
