@@ -26,7 +26,7 @@ def get_custom_stop_words(language):
     if language == "es":
         return load_stop_words('spanish.txt')
     else:  # Para inglés 
-        return load_stop_words('english.txt')
+        return load_stop_words('/mount/src/em_projects/Chatbot_Streamlit_OpenAI/english.txt')
     
 # Función para calcular el número de oraciones en el resumen
 def calculate_num_sentences(num_messages, min_sentences=2, max_sentences=10, factor=5):
