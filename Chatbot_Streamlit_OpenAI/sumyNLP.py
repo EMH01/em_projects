@@ -4,6 +4,13 @@ from sumy.summarizers.lsa import LsaSummarizer
 from sumy.nlp.stemmers import Stemmer
 from langdetect import detect
 
+# Descargar recursos de NLTK si no están presentes
+def download_nltk_resources():
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt')
+
 # Función para detectar el idioma
 def detect_language(text):
     return detect(text)
@@ -26,6 +33,7 @@ def calculate_num_sentences(num_messages, min_sentences=2, max_sentences=10, fac
 
 # Función para extraer y resumir los mensajes del asistente usando Sumy con LSA
 def summarize(messages):
+    download_nltk_resources()
     # Filtrar los mensajes del asistente
     mensajes_asistente = [msg["content"] for msg in messages if msg["role"] == "assistant"]
     
@@ -59,6 +67,7 @@ def summarize(messages):
     return resumen_mensajes
 
 def summarize_text(text):
+    download_nltk_resources()
     language = detect_language(text)
     parser = PlaintextParser.from_string(text, Tokenizer(language))
     sentences = parser.document.sentences
@@ -82,6 +91,7 @@ def summarize_text(text):
     
 # Función para dividir el texto en fragmentos más pequeños
 def split_text(text, max_tokens=3000):
+    download_nltk_resources()
     sentences = text.split('. ')
     chunks = []
     current_chunk = ""
