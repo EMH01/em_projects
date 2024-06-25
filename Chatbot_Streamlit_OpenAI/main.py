@@ -1,36 +1,26 @@
-from openai import OpenAI
 import streamlit as st
 from streamlit_chat import message  # es para desplegar chat de mensajes con avatares
 from st_login_form import login_form
-from supabase import create_client, Client
+from bot_op import ask_gpt,file_gpt
+from DB_op import delete_acc,load_messages,clean_message
 import fitz  # PyMuPDF
-from sumyNLP import summarize, split_text, summarize_text
-# import os #para acceder a la variable de entorno local
 
-# Initializar conexion DB usuarios desde archivos de st.secrets
-# Para hacerlo desde el servidor local se le pueden pasar directamente por parametro
-@st.cache_resource
-def conectDB()-> Client:
-  return create_client(st.secrets["SUPABASE_URL"], st.secrets["SUPABASE_KEY"])
-
+# Pag para inicializar login
 def login_page():
   client = login_form()
   if st.session_state["authenticated"]:
     if "messages" in st.session_state: del st.session_state["messages"]
     st.rerun()  # Redireccionar a la página principal una vez autenticado
-  
-# Función para eliminar la cuenta
+
+# Pag/formulario para eliminar la cuenta
 def delete_form():
-  client = conectDB()
   with st.form("delete_account_form"):
     st.write("Are you sure you want to delete your account?")
     username = st.text_input("Enter your username", value=st.session_state["username"])
     password = st.text_input("Enter your password", type="password")
     confirm = st.form_submit_button("Delete account")
     if confirm:
-      response = client.table("users").select("username, password").eq("username", username).eq("password", password).execute()
-      if len(response.data) > 0:
-        client.table("users").delete().eq("username", username).eq("password", password).execute()
+      if delete_acc(username,password):
         st.success("Account deleted successfully.")
         st.session_state["authenticated"] = False
         st.session_state["username"] = None
@@ -44,29 +34,7 @@ def delete_form():
       st.session_state["authenticated"] = True
       st.rerun()
 
-# GUARDAR EN BD LA SESION
-def save_message(username, role, content):
-  client = conectDB()
-  client.table("messages").insert({
-      "username": username,
-      "role": role,
-      "content": content
-  }).execute()
-
-def load_messages(username):
-  client = conectDB()
-  response = client.table("messages").select("role, content").eq("username", username).execute()
-  return [{"role": msg["role"], "content": msg["content"]} for msg in response.data]
-
-def clean_message(username):
-  client = conectDB()
-  response = client.table("messages").select("username").eq("username", username).execute()
-  if len(response.data) > 0:
-    client.table("messages").delete().eq("username",username).execute()
-    if "messages" in st.session_state: del st.session_state["messages"]
-    if "summarized_messages" in st.session_state: del st.session_state["summarized_messages"]
-    st.rerun()
-        
+# Pag para subir archivo y procesarlo para enviarlo al LLM        
 def submit_page():
   content = ""
   uploaded_file = st.file_uploader("Upload a file",type=["txt","pdf"])
@@ -94,9 +62,11 @@ def submit_page():
   if st.button("Cancel"):
     st.session_state["submit_file"]=False
     st.rerun()
-  
+
+# Pagina principal del chat  
 def main_page():
   st.title("Assiend: Your assistant and friend")
+
   # Barra de cierre de sesion o eliminacion de cuenta 
   username = st.session_state["username"]
   
@@ -117,12 +87,6 @@ def main_page():
         st.session_state["to_delete"]=True
         st.session_state["authenticated"]=False
         st.rerun()
-
-  
-  # Crear instancia del cliente de OpenAI
-  # client = OpenAI(api_key=open('apikey.txt').read()) # usando la clave desde archivo de texto
-  # client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))  # usando la clave desde v.entorno local
-  client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"]) # usando la clave desde v.entorno en streamlit secrets
 
   # Definir avatares de los roles del chat segun los avatares predefinidos en streamlit_chat
   avatar = {
@@ -146,50 +110,32 @@ def main_page():
     st.rerun()
 
 
-  
   # Guardar estados de la sesion en streamlit para tener historial de mensajes
   if "messages" not in st.session_state: 
     # si el historial esta vacio, verificar historial anterior o mandar el primer msj predefinido
     # Cargar el historial de mensajes
     list_messages = load_messages(username) if username else None
     if list_messages: 
-      # Resumir el historial de mensajes si existe
       st.session_state["messages"] = list_messages
       st.session_state["messages"].append({"role": "assistant", "content": "Hi I'm your personal assistant chatbot ¿What can I do for you today?"})
     else:
       st.session_state["messages"] = [{"role": "assistant","content": "Hi! I'm your personal assistant chatbot. How can I assist you today?"}]
 
+
   # Enviar  archivo al modelo y actualizar el historial de mensajes
   if "file" in st.session_state: 
     text = st.session_state["file"]
-    chunks = split_text(text)
-    summaries = [summarize_text(chunk) for chunk in chunks]
-    combined_summary = " ".join(summaries)
-    prompt = f"Please summarize the following text and generate a debate on the key points presented in the same language of the text. The provided text is as follows: {combined_summary}. Please synthesize the main ideas and develop arguments for and against, highlighting the most relevant implications."
-    ask = [{"role": "user", "content": prompt}]
-    response = client.chat.completions.create(model="gpt-3.5-turbo",messages=ask,max_tokens=400,temperature=1.0)
-    msg = response.choices[0].message.content
+    msg = file_gpt(text,username)
     st.session_state.messages.append({'role': 'assistant', 'content': msg})
-    if username: save_message(username, "assistant", msg)
     del st.session_state["file"]
 
   # Enviar todos los mensajes al modelo y actualizar el historial de mensajes
   if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input}) #agrega msj entrado a la sesion e historial
-  
     with placeholder.container():
       with st.spinner('Loading...'):
-          if username:
-            save_message(username, "user", user_input)
-            summarized_messages = summarize(st.session_state.messages)
-            summarized_messages.append({"role": "user", "content": user_input}) #agrega msj entrado 
-            response = client.chat.completions.create(model="gpt-3.5-turbo",messages=summarized_messages,max_tokens=400,temperature=1.0)
-            msg = response.choices[0].message.content
-          else:
-            response = client.chat.completions.create(model="gpt-3.5-turbo",messages=st.session_state.messages,max_tokens=400,temperature=1.0)
-            msg = response.choices[0].message.content
+          msg = ask_gpt(username,user_input)
       st.session_state.messages.append({'role': 'assistant', 'content': msg})
-      if username: save_message(username, "assistant", msg)
 
   # Mostrar los mensajes en el chat
   for i, msg in enumerate(st.session_state.messages):
