@@ -21,7 +21,7 @@ A supabase database is used to ensure that the chatbot has memory with both user
 For the login form the tool `st_login_form` created by Siddhant Sadangi is used, which creates a user login form connected to a Supabase database, see in detail [st_login_form](https://github.com/SiddhantSadangi/st_login_form )
 
 ### File Structure
-- 'requirements.txt': File containing the project dependencies for a simple installation with 'pip install -r requirements.txt`.
+- `requirements.txt`: File containing the project dependencies for a simple installation with 'pip install -r requirements.txt`.
 - `DB_op.py`: File with the functions that define database operations, data handling and storage.
 - `bot_op.py`: File with the main functions of the chatbot to send the requests to the LLM model(gpt-3).
 - `sumyNLP.py`: Used for natural language processing with Sumy.
