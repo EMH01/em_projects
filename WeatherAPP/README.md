@@ -35,7 +35,7 @@ It has a simple and intuitive graphical interface including login interface, dev
    It looks like a local execution of the aplication, but it is also deployed publicly from a Huggingface space, just like Flowise and GraphQL. Which you can access at:
    - GraphQL by strawberry: Space(https://huggingface.co/spaces/esthermariamh/GraphQL), Service(https://esthermariamh-graphql.hf.space)
    - Weather Assistant App: Space(https://huggingface.co/spaces/esthermariamh/WeatherAssistant), Service(https://esthermariamh-weatherassistant.hf.space)
-   - FlowiseAIÑ as it is a drag and drop tool and different from the previous ones, it is better to follow the instructions in the documentation and configure it, for the safety of the current flow. See https://docs.flowiseai.com/configuration/deployment/hugging-face.
+   - FlowiseAI: as it is a drag and drop tool and different from the previous ones, it is better to follow the instructions in the documentation and configure it, for the safety of the current flow. See https://docs.flowiseai.com/configuration/deployment/hugging-face.
    
    In the Data folder, there is the skeleton of the used flow, exported as a json, and other files with the code and data describing the defined flow.
 
