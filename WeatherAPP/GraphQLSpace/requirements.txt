@@ -1,0 +1,5 @@
+gradio
+python-dotenv
+pytest
+pytest-mock
+strawberry-graphql

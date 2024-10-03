@@ -1,0 +1,3 @@
+FLOWISE_TOKEN="your_flowise_token"
+FLOWISE_URL="your_flowise_flow_url"
+OPENWEATHER_API_KEY="keyopenweather"
