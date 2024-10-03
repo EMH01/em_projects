@@ -1,0 +1,73 @@
+weather_retriever
+
+Tool for search for current weather data or forecast, using a graphQL endpoint
+
+Input Schema:
+city string city that the query ask about its weather data
+
+const fetch = require('node-fetch');
+
+async function weather_retriever(city) {
+    const OPENWEATHER_API_KEY = 'eb3adb79c6dba0cf3ceb1e1f43d85aa1';
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPENWEATHER_API_KEY}&units=metric`;
+    
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    
+    try {
+        const response = await fetch(url, options);
+        const weather_data = await response.json();
+        return JSON.stringify(weather_data);
+    } catch (error) {
+        console.error(error);
+        return '';
+    }
+}
+const weatherInfo = await weather_retriever($city);
+return weatherInfo;
+
+
+VERSION GRAPHQL
+const fetch = require('node-fetch');
+
+async function getWeatherInfo(city) {
+    const url = 'https://esthermariamh-graphql.hf.space/';
+    const query = `
+    {
+        weather(city: "${city}") {
+            city
+            main
+            description
+            temperature
+            feelsLike
+            tempMin
+            tempMax
+            pressure
+            humidity
+            seaLevel
+            wind {
+                speed
+                deg
+            }
+            clouds {
+                all
+            }
+        }
+    }`;
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: query })
+    });
+
+    const data = await response.json();
+    return JSON.stringify(data);
+}
+
+const weather = await getWeatherInfo($city);
+return weather;

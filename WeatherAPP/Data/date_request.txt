@@ -1,0 +1,52 @@
+date_search
+Calculates the current date to provide a greater facility to find the weather of a specified day,using a graphQL endpoint
+
+timezone string time zone of the location to calculate current date
+
+const fetch = require('node-fetch');
+
+
+async function getCurrentTime(timezone) {
+    const url = `https://worldtimeapi.org/api/timezone/${timezone}`;
+    const options = { method: 'GET', headers: { 'Content-Type': 'application/json' } };
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        // Convertir la fecha y hora al formato deseado y devolver como texto plano
+        const dateTime = new Date(data.datetime);
+        const formattedDateTime = dateTime.toLocaleString('en-US', { timeZone: timezone });
+        return formattedDateTime;
+    } catch (error) {
+        console.error(error);
+        return 'Error al obtener la fecha y hora';
+    }
+}
+
+const currentTime = await getCurrentTime($timezone);
+return currentTime;
+
+
+VERSION GRAPHQL
+const fetch = require('node-fetch');
+
+async function getCurrentTime(timezone) {
+  const url = 'https://esthermariamh-graphql.hf.space/';
+  const query = `{
+    date(timezone: "${timezone}")
+  }`;
+  
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query: query })
+  });
+  const data = await response.json();
+  
+  const dateTime = new Date(data.data.date);
+  const formattedDateTime = dateTime.toLocaleString('en-US', { timeZone: timezone });
+  return formattedDateTime;
+}
+
+const currentTime = await getCurrentTime($timezone);
+return currentTime;
+
