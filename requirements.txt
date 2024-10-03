@@ -1,0 +1,7 @@
+gradio
+python-dotenv
+pytest
+pytest-mock
+pytest-cov
+strawberry-graphql
+supabase
