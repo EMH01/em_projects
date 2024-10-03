@@ -31,7 +31,7 @@ It has a simple and intuitive graphical interface including login interface, dev
 
    In gradio, if you want to generate a public link during a few hours, you can set `(share=True)` in `launch()`, in the line where the execution is defined in the code.
 
-## Aplicación desplegada
+## App
    It looks like a local execution of the aplication, but it is also deployed publicly from a Huggingface space, just like Flowise and GraphQL. Which you can access at:
    - GraphQL by strawberry: Space(https://huggingface.co/spaces/esthermariamh/GraphQL), Service(https://esthermariamh-graphql.hf.space)
    - Weather Assistant App: Space(https://huggingface.co/spaces/esthermariamh/WeatherAssistant), Service(https://esthermariamh-weatherassistant.hf.space)
