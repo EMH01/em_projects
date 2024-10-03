@@ -1,0 +1,4 @@
+FLOWISE_TOKEN="your_flowise_token"
+FLOWISE_URL="your_flowise_flow_url"
+SUPABASE_URL="link_to_your_database"
+SUPABASE_KEY="yout_database_key"
