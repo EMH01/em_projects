@@ -1,4 +1,4 @@
-# PrintAI Test Project
+# WeatherAPP Project
 
 This project is a virtual assistant developed in python language using FlowiseAI for its operation and flow, from HuggingFace. The objective is to provide weather data and related queries, from a specified location. This can be current data or forecasts, however, for queries needing historical data, only data from Boulder, CO is available.
 It has a simple and intuitive graphical interface including login interface, developed with Hugginface's Gradio framework. Besides GraphQL is used as the query language that communicates the application with flowise and the necessary APIs.
