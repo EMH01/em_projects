@@ -25,14 +25,16 @@ def search_covers(query_url, top_k):
 
     formatted_results = []
     for i, res in enumerate(results):
-      color = "green" if float(res["similarity"].strip('%')) > 30 else "red"
+      # Agregar flechas o asteriscos para simular énfasis
+      similarity = float(res["similarity"].strip('%'))
+      status = "✅" if similarity > 30 else "❌"
       formatted_results.append(
-        f"<div style='color:{color}; margin-bottom:10px;'>"
-        f"<strong>{i+1}. {res['title']} - {res['author']}</strong> "
-        f"(Similarity: {res['similarity']})"
-        f"</div>"
+          f"{status} {i+1}. {res['title']} - {res['author']} (Similarity: {res['similarity']})"
       )
-    return "\n".join(formatted_results),""
+
+      song = get_details_from_youtube_url(query_url)
+      song_info = f"{song['title']} - {song['author']}"
+    return gr.Textbox(label=song_info, value="\n".join(formatted_results),),""
 
   except Exception as e:
     raise gr.Error(f"❌ Error during search: {e}")
@@ -49,14 +51,16 @@ with gr.Blocks(theme=gr.themes.Soft()) as app:
       stored_songs_output = gr.Textbox(label="Stored Songs", lines=10, interactive=False)
       add_button.click(add_song, inputs=song_url_input, outputs=[stored_songs_output, song_url_input])
 
-      with gr.Column():
-        gr.Markdown("### 🔍 **Search for Similar Covers**")
-        with gr.Row():
-          query_url_input = gr.Textbox(label="Search Cover URL", placeholder="Enter a YouTube URL to search...")
-          top_k_input = gr.Number(label="Top Results to Show", value=1, precision=0)
-        search_button = gr.Button("🔍 Search")
-        search_output = gr.HTML(label="Results")
-        search_button.click(search_covers, inputs=[query_url_input, top_k_input], outputs=[search_output, query_url_input])
+    with gr.Column():
+      gr.Markdown("### 🔍 **Search for Similar Covers**")
+      with gr.Row():
+        query_url_input = gr.Textbox(label="Search Cover URL", placeholder="Enter a YouTube URL to search...")
+        top_k_input = gr.Number(label="Top Results to Show", value=1, precision=0,minimum=1)
+
+      search_button = gr.Button("🔍 Search")
+      # search_output = gr.HTML(label="Results")
+      search_output = gr.Textbox(label="Song Title and Artist", lines=10, interactive=False)
+      search_button.click(search_covers, inputs=[query_url_input, top_k_input], outputs=[search_output, query_url_input])
 
 # App Execute
 app.launch()
