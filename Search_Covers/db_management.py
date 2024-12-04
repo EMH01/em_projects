@@ -1,12 +1,8 @@
-from sentence_transformers import SentenceTransformer
-import faiss
-import numpy as np
-import pandas as pd
-from sklearn.preprocessing import normalize
-import torch
-import torchvision
-import torchaudio
-from data_URL_handling import get_details_from_youtube_url
+import faiss  
+import numpy as np  
+from sklearn.preprocessing import normalize  
+from sentence_transformers import SentenceTransformer  
+from data_URL_handling import get_details_from_youtube_url  
 
 class SongDatabase:
     def __init__(self):
@@ -24,6 +20,7 @@ class SongDatabase:
         """
         # Extract lyrics from song url
         song = get_details_from_youtube_url(url_yt)
+            
         if not song or not song["lyrics"]:
           raise ValueError("There was an error trying to extract the data from the URL")
 
@@ -119,4 +116,3 @@ class SongDatabase:
               "similarity": f"{similarity:.1f}%"
           })
       return results
-
