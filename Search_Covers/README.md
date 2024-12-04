@@ -1,3 +1,6 @@
+
+---
+
 # 🎵 Cover Searching App
 
 This project is a Python-based application that allows users to search for similar song covers by analyzing the lyrics of YouTube videos. It leverages advanced tools such as **OpenAI Whisper** for audio transcription, **SentenceTransformers** for lyric embeddings, and **FAISS** for similarity search.
