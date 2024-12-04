@@ -1,11 +1,7 @@
-from pytubefix import YouTube
-import numpy as np
-import pandas as pd
+import re
 import whisper
 import torch
-import torchvision
-import torchaudio
-import re
+from pytubefix import YouTube
 
 def is_valid_youtube_url(url):
   """
@@ -19,12 +15,14 @@ def is_valid_youtube_url(url):
       r"^(https?://)?(www\.)?(youtube\.com|youtu\.?be)/.+$"
   )
   return youtube_regex.match(url) is not None
-    
+
 def get_details_from_youtube_url(youtube_url):
   """
     Extract the lyrics from a YouTube video using openai-whisper.
+
     Args:
         youtube_url: The URL of the YouTube video.
+
     Returns:
         A dictionary with the video details and the transcribed lyrics.
     """
@@ -32,8 +30,11 @@ def get_details_from_youtube_url(youtube_url):
     raise ValueError(f"Error: The URL '{youtube_url}' is invalid. Tray another")
 
   try:
-    model = whisper.load_model("base",device="cuda") #large-v2, large
+    # change to cpu in local or hf space
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = whisper.load_model("base", device=device)  #large-v2, large
 
+    # yt = YouTube(youtube_url,use_po_token=True,use_oauth=True, allow_oauth_cache=True) # for another enviroments like hf space
     yt = YouTube(youtube_url)
 
     # Prepare video details
@@ -59,4 +60,4 @@ def get_details_from_youtube_url(youtube_url):
     return video_details
 
   except Exception as e:
-    return f"Error processing YouTube URL {youtube_url}: {e}"
+    raise ValueError(f"Error processing YouTube URL {youtube_url}: {e}")
