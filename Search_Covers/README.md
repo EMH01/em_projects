@@ -31,7 +31,7 @@ Given these challenges, **Google Colab** was chosen as the primary environment f
 - **OpenAI Whisper**: For transcribing audio into text.  
 - **SentenceTransformers**: For generating embeddings of song lyrics.  
 - **FAISS**: For efficient similarity search.  
-- **PyTube**: For handling YouTube video extraction.  
+- **PyTubeFix**: For handling YouTube video extraction.  
 
 ## 📦 Prerequisites
 
