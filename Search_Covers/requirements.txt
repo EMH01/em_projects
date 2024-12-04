@@ -4,7 +4,7 @@ faiss-cpu
 numpy
 pandas
 scikit-learn
-whisper
+openai-whisper
 torch
 torchvision
 torchaudio
