@@ -30,4 +30,4 @@ For the login form the tool `st_login_form` created by Siddhant Sadangi is used,
 - `main.py `: Main file that contains the logic of the application complementing itself with the rest of the files and the configuration of the visual appearance using Streamlit.
 
 To test the execution of the created page on the local server, it is executed in the terminal `/path-location-file/streamlit run main.py `
-and to deploy it, Streamlit/Cloud is used. See the application displayed in [the link](https://emprojects-chat-bot .streamlit.app/). It may be displayed however errors may appear in the case that you try to use my application because the database goes into disabled mode due to disuse.
+and to deploy it, Streamlit/Cloud is used. See the application displayed in [the link](https://emprojects-chat-bot.streamlit.app/). It may be displayed however errors may appear in the case that you try to use my application because the database goes into disabled mode due to disuse.
