@@ -94,4 +94,4 @@ Ejemplo práctico de implementación de técnicas de Zero Shot Learning.
 
 Este repositorio se mantiene como archivo histórico de proyectos que sirvieron para la introducción en proyectos prácticos de AI y ML. 
 
-*Repositorio creado por EMH01 - Colección de proyectos sencillos de IA y Machine Learning*
+*Repositorio creado por EMH01 - Colección de proyectos simples e investigaciones sobre IA y Machine Learning*
