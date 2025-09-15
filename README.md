@@ -2,13 +2,11 @@
 
 ## ⚠️ Aviso Importante
 
-Este repositorio contiene proyectos desarrollados hace algún tiempo. **Es importante tener en cuenta que las tecnologías, librerías y estrategias utilizadas pueden haber evolucionado considerablemente** desde su creación. Algunas dependencias podrían estar desactualizadas o requerir ajustes para funcionar con las versiones más recientes de las librerías.
-
-Se recomienda revisar y actualizar las dependencias antes de ejecutar cualquier proyecto.
+Este repositorio contiene proyectos desarrollados hace algún tiempo. **Las tecnologías, librerías y estrategias utilizadas pueden haber evolucionado considerablemente** desde su creación. Algunas dependencias podrían estar desactualizadas.
 
 ## 📁 Descripción de Proyectos
 
-Este repositorio contiene una colección de proyectos de inteligencia artificial, machine learning y desarrollo de aplicaciones organizados por carpetas:
+Este repositorio contiene una colección de proyectos simples de inteligencia artificial, machine learning y desarrollo de aplicaciones organizados por carpetas:
 
 ### 🎨 **CartoonizerApp_Streamlit_OpenCV**
 Aplicación web desarrollada con Streamlit que aplica efectos de dibujo animado a imágenes utilizando OpenCV. Incluye interfaz simple para cargar imágenes y procesarlas.
@@ -94,16 +92,6 @@ Ejemplo práctico de implementación de técnicas de Zero Shot Learning.
 
 ## 🔄 Estado de Mantenimiento
 
-Este repositorio se mantiene como archivo histórico de proyectos. Para uso en producción, se recomienda:
-- Actualizar todas las dependencias a versiones estables recientes
-- Revisar y modernizar el código según las mejores prácticas actuales
-- Verificar la compatibilidad con las últimas versiones de frameworks
-- Actualizar documentación y instrucciones de instalación
+Este repositorio se mantiene como archivo histórico de proyectos que sirvieron para la introducción en proyectos prácticos de AI y ML. 
 
-## 📞 Contacto
-
-Para preguntas o colaboraciones relacionadas con estos proyectos, puedes contactar al autor a través de GitHub.
-
----
-
-*Repositorio mantenido por EMH01 - Colección de proyectos de IA y Machine Learning*
+*Repositorio creado por EMH01 - Colección de proyectos sencillos de IA y Machine Learning*
