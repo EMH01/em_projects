@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from pathlib import Path
 
-
 Lexicon = dict[str, dict[str, tuple[float, float]]]
 
 
