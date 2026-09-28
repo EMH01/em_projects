@@ -1,13 +1,12 @@
 import os
 
-from openai import OpenAI
 import streamlit as st
+from openai import OpenAI
 
 from document_ai.config import Settings
 from document_ai.llm import answer_question
 from document_ai.pdf import extract_chunks
 from document_ai.retrieval import embed_chunks, retrieve
-
 
 st.set_page_config(page_title="Document AI Assistant", page_icon="📄", layout="wide")
 settings = Settings()
