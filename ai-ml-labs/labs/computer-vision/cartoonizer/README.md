@@ -13,7 +13,7 @@ BGR image
   → edge mask × smoothed colour image
 ```
 
-This modernizes the original `CartoonizerApp_Streamlit_OpenCV` demo.
+This is a modernized version of an earlier Streamlit/OpenCV cartoonization demo.
 
 ### Improvements
 
