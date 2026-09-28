@@ -1,9 +1,8 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import httpx
 
 from .models import Location, WeatherSnapshot
-
 
 GEOCODING_URL = "https://api.openweathermap.org/geo/1.0/direct"
 CURRENT_WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
@@ -78,7 +77,7 @@ class OpenWeatherClient:
 
         return WeatherSnapshot(
             location=location,
-            observed_at_utc=datetime.fromtimestamp(data["dt"], tz=timezone.utc),
+            observed_at_utc=datetime.fromtimestamp(data["dt"], tz=UTC),
             timezone_offset_seconds=int(data.get("timezone", 0)),
             condition=weather["main"],
             description=weather["description"],
