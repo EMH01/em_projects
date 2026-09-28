@@ -3,7 +3,6 @@ from typing import Any
 
 from .resources import Lexicon
 
-
 POS_MAP = {
     "ADJ": "a",
     "NOUN": "n",
