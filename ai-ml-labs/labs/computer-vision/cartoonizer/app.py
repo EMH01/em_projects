@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import streamlit as st
-
 from ai_ml_labs.cartoonizer import cartoonize
 
 
