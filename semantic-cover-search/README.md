@@ -2,7 +2,7 @@
 
 A semantic audio-search experiment for finding **cover songs and lyrically similar performances** from their transcribed content.
 
-This project modernizes the original `Search_Covers` experiment from `EMH01/em_projects`. The original idea is preserved—transcribe songs, embed the lyrics, and search by semantic similarity—but the implementation is now split into testable components and no longer makes YouTube a hard dependency.
+This project evolved from an earlier cover-search experiment. The core idea is preserved—transcribe songs, embed the lyrics, and search by semantic similarity—but the implementation is now split into testable components and no longer makes YouTube a hard dependency.
 
 ## Pipeline
 
@@ -108,6 +108,6 @@ This modernization pass establishes a reproducible architecture. Before portfoli
 - evaluate robustness to instrumental sections and noisy recordings
 - add screenshots / demo media after the UI is validated
 
-## Origins
+## Project evolution
 
-The original `Search_Covers` folder remains untouched while this new implementation is validated.
+This implementation supersedes the earlier prototype and is the maintained version of the project.
