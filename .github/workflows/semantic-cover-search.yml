@@ -1,0 +1,38 @@
+name: Semantic Cover Search CI
+
+on:
+  push:
+    paths:
+      - "semantic-cover-search/**"
+      - ".github/workflows/semantic-cover-search.yml"
+  pull_request:
+    paths:
+      - "semantic-cover-search/**"
+      - ".github/workflows/semantic-cover-search.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: semantic-cover-search
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: semantic-cover-search/pyproject.toml
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Test
+        run: pytest -q
