@@ -1,9 +1,0 @@
-openai
-streamlit
-streamlit_chat
-st_login_form
-supabase
-PyMuPDF
-sumy
-langdetect
-nltk
