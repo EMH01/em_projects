@@ -1,6 +1,6 @@
 # Zero-shot Vision Classification
 
-A minimal multimodal inference lab derived from the original `Zero_Shot_Example.ipynb`.
+A minimal multimodal inference lab for zero-shot image classification.
 
 The original notebook used a vision-capable chat model to decide whether a house was present in a remote image. The modernized example keeps that small scope while moving to the **Responses API** and making the model configurable rather than hard-coding a dated model ID.
 
