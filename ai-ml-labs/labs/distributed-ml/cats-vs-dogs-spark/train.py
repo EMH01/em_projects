@@ -11,7 +11,7 @@ from pyspark.ml.classification import (
 )
 from pyspark.ml.evaluation import BinaryClassificationEvaluator, MulticlassClassificationEvaluator
 from pyspark.ml.feature import StringIndexer, UnivariateFeatureSelector
-from pyspark.ml.linalg import VectorUDT, Vectors
+from pyspark.ml.linalg import Vectors, VectorUDT
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, regexp_extract, udf
 
