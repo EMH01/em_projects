@@ -28,7 +28,10 @@ def test_cluster_embeddings_groups_close_vectors():
         frozenset({"fútbol", "baloncesto"}),
         frozenset({"economía", "mercados"}),
     }
-    assert all(cluster.representative in {member.text for member in cluster.members} for cluster in clusters)
+    assert all(
+        cluster.representative in {member.text for member in cluster.members}
+        for cluster in clusters
+    )
 
 
 def test_cluster_embeddings_is_deterministic_for_fixed_seed():
