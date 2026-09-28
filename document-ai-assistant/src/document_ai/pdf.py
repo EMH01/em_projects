@@ -14,7 +14,12 @@ IMAGE_CAPTION_PROMPT = (
 )
 
 
-def caption_image(client: OpenAI, image_bytes: bytes, model: str) -> str:
+def caption_image(
+    client: OpenAI,
+    image_bytes: bytes,
+    model: str,
+    mime_type: str = "image/png",
+) -> str:
     encoded = base64.b64encode(image_bytes).decode("ascii")
     response = client.responses.create(
         model=model,
@@ -25,7 +30,7 @@ def caption_image(client: OpenAI, image_bytes: bytes, model: str) -> str:
                     {"type": "input_text", "text": IMAGE_CAPTION_PROMPT},
                     {
                         "type": "input_image",
-                        "image_url": f"data:image/png;base64,{encoded}",
+                        "image_url": f"data:{mime_type};base64,{encoded}",
                     },
                 ],
             }
@@ -51,7 +56,11 @@ def extract_chunks(
 
             for image_info in page.get_images(full=True):
                 image = document.extract_image(image_info[0])
-                caption = caption_image(client, image["image"], vision_model)
+                extension = image.get("ext", "png").lower()
+                mime_type = "image/jpeg" if extension in {"jpg", "jpeg"} else f"image/{extension}"
+                caption = caption_image(
+                    client, image["image"], vision_model, mime_type=mime_type
+                )
                 if caption:
                     chunks.append(
                         Chunk(
