@@ -4,7 +4,6 @@ from typing import Any
 import numpy as np
 from sklearn.cluster import KMeans
 
-
 TOPIC_POS = {"NOUN", "PROPN", "VERB"}
 
 
