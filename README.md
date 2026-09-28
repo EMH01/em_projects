@@ -19,7 +19,7 @@ My work spans applied machine learning, deep learning, natural language processi
 | [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) | Explainable AI · Research | Learned perturbation masks for image classifiers, VGG19-BN, reproducible research pipeline |
 | [**Spanish NLP Toolkit**](https://github.com/EMH01/spanish-nlp-toolkit) | NLP · Topic Modeling · Sentiment | spaCy, deterministic K-Means clustering, lexical sentiment analysis, FastAPI |
 | [**Weather AI Assistant**](https://github.com/EMH01/weather-ai-assistant) | AI Engineering · APIs · GraphQL | Grounded LLM responses from verified weather data, GraphQL, Gradio, Docker |
-| [**Personal Wellness AI Assistant**](https://github.com/EMH01/Personal_Trainer) | Applied AI · Azure OpenAI · Streamlit | Local-first wellness planning, private user configuration, optional Document Intelligence |
+| [**Personal Wellness AI Assistant**](https://github.com/EMH01/personal-wellness-ai-assistant) | Applied AI · Azure OpenAI · Streamlit | Local-first wellness planning, private user configuration, optional Document Intelligence |
 
 ---
 
