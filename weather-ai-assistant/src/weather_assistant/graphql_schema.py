@@ -4,7 +4,7 @@ import strawberry
 
 from .config import Settings
 from .history import BoulderHistoryRepository
-from .time_utils import current_time_in_zone
+from .time_utils import current_time_in_zone, local_time_from_offset
 from .weather import OpenWeatherClient
 
 
@@ -51,12 +51,9 @@ def create_schema(settings: Settings | None = None) -> strawberry.Schema:
             ) as client:
                 snapshot = client.current(city, language=language)
 
-            local_observed = snapshot.observed_at_utc.astimezone(
-                __import__("datetime").timezone(
-                    __import__("datetime").timedelta(
-                        seconds=snapshot.timezone_offset_seconds
-                    )
-                )
+            local_observed = local_time_from_offset(
+                snapshot.timezone_offset_seconds,
+                now=snapshot.observed_at_utc,
             )
             return Weather(
                 location=snapshot.location.label,
