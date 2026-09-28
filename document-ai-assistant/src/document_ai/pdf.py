@@ -6,7 +6,6 @@ from openai import OpenAI
 from .models import Chunk
 from .retrieval import chunk_text
 
-
 IMAGE_CAPTION_PROMPT = (
     "Describe the information conveyed by this image from a PDF. Focus on facts, labels, "
     "relationships, chart trends, table-like content, or diagram structure that could help answer "
