@@ -15,7 +15,7 @@ The dataset reference remains the Kaggle **Dogs vs. Cats** dataset used by the o
 
 ## Corrections made during modernization
 
-The historical notebook is preserved unchanged, but this lab corrects several issues in the executable version:
+This maintained lab corrects several issues identified in the earlier notebook:
 
 - the MLP output layer now has **2 units**, matching the binary Cat/Dog task rather than 10
 - the selected-feature LinearSVC now actually uses `selected_features`

@@ -38,7 +38,7 @@ Training updates the **explainer only**. The classifier is kept frozen.
 - Experiments on reduced Food-101-derived class sets.
 - The option to train the explainer only on samples already classified correctly.
 
-The original thesis PDF and Colab-exported implementation remain untouched under `Trabajo de Diploma/` while this version is validated.
+The original thesis PDF is preserved in [`docs/Proposal of a new explainability method.pdf`](docs/Proposal%20of%20a%20new%20explainability%20method.pdf).
 
 ## What is modernized
 
@@ -189,4 +189,4 @@ Before this project becomes a standalone portfolio repository, the next research
 
 ## Original research artifact
 
-The original thesis PDF, **Proposal of a new explainability method**, remains in the source repository under `Trabajo de Diploma/`. It should be carried into the final standalone repository as the historical research artifact once the project extraction is performed.
+The thesis PDF, **Proposal of a new explainability method**, is preserved in [`docs/`](docs/) alongside the maintained research implementation.

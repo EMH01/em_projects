@@ -1,6 +1,6 @@
 # Reference-guided Windshield Inspection
 
-A small multimodal prompting experiment derived from `Demo_Test_Windshield.ipynb`.
+A small multimodal prompting experiment for reference-guided visual inspection.
 
 The task supplies:
 

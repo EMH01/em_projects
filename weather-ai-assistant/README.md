@@ -2,7 +2,7 @@
 
 A modernized weather assistant combining **live weather services, GraphQL, historical data, and grounded LLM responses**.
 
-This project evolves the original `WeatherAPP` from `EMH01/em_projects`. The original version connected Gradio, Supabase, Strawberry GraphQL, OpenWeather, WorldTimeAPI, Flowise, Docker, and a Boulder historical dataset. This modernization keeps the useful system-design ideas while removing unnecessary coupling and unsafe authentication patterns.
+This project evolved from an earlier weather-assistant prototype that connected Gradio, Supabase, Strawberry GraphQL, OpenWeather, WorldTimeAPI, Flowise, Docker, and a Boulder historical dataset. The maintained implementation keeps the useful system-design ideas while removing unnecessary coupling and unsafe authentication patterns.
 
 ## Architecture
 
@@ -59,9 +59,7 @@ This also keeps location resolution separate from weather retrieval.
 
 ### Flowise is no longer a runtime dependency
 
-The original Flowise chatflow remains part of the historical source project and documents how the first agent was designed.
-
-The modernized application performs deterministic data retrieval in Python first, then sends the **verified weather context** to the LLM. The model is responsible for conversational presentation, not for inventing or fetching weather measurements.
+The maintained application performs deterministic data retrieval in Python first, then sends the **verified weather context** to the LLM. The model is responsible for conversational presentation, not for inventing or fetching weather measurements.
 
 ### No custom password database
 
@@ -77,7 +75,7 @@ Current local time can be calculated using Python's standard `zoneinfo` database
 
 ### Historical Boulder data is an adapter
 
-The original project contains daily Boulder weather data for 2023. The modernized application can still query it when `BOULDER_HISTORY_CSV` is configured.
+The application can optionally query a compatible Boulder daily-weather CSV when `BOULDER_HISTORY_CSV` is configured.
 
 The source CSV stores temperatures in Fahrenheit. The adapter converts them to Celsius so current and historical context do not silently mix units.
 
@@ -185,7 +183,7 @@ The new Docker image deliberately uses a single straightforward installation sta
 
 API credentials belong only in environment variables.
 
-During this modernization an OpenWeather API key was found embedded in the historical public Flowise tool example. A separate security PR removes that value from the current repository state.
+During modernization an OpenWeather API key was found embedded in an earlier public prototype and was removed from the current repository state.
 
 Because Git retains previous commits, removing a credential from the latest file does **not** invalidate the exposed credential. Any previously committed key should be rotated/revoked by its provider.
 
@@ -227,4 +225,4 @@ Forecasting is deliberately not presented as implemented until a forecast provid
 - add screenshots and architecture/result visuals
 - deploy a public demo
 
-The final standalone repository should present the modernized implementation as the main project and retain the original Flowise export only as historical design context.
+The maintained implementation is the canonical version of the project.

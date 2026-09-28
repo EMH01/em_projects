@@ -1,6 +1,6 @@
 # CIFAR-10 Transfer Learning with VGG19-BN
 
-A cleaned-up version of the original `Pytorch_Classifier_Cifar10` experiment.
+A cleaned-up transfer-learning experiment for CIFAR-10 using VGG19-BN.
 
 The lab fine-tunes a pretrained VGG19-BN classifier for the 10 CIFAR-10 classes.
 

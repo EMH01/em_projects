@@ -2,9 +2,9 @@
 
 A curated collection of **Data Science, Machine Learning, and AI Engineering projects** covering document intelligence, semantic search, explainable AI, NLP, computer vision, multimodal systems, and applied AI applications.
 
-This repository is currently being reorganized into a cleaner portfolio structure. The projects listed first below are the **maintained implementations** and are the versions intended for continued development and eventual extraction into standalone repositories.
+The repository contains the maintained implementations only: substantial projects live as self-contained directories, while smaller experiments are grouped under **AI / ML Labs**.
 
-## Maintained projects
+## Projects
 
 | Project | Area | Main technologies | Focus |
 |---|---|---|---|
@@ -15,9 +15,9 @@ This repository is currently being reorganized into a cleaner portfolio structur
 | [Weather AI Assistant](weather-ai-assistant/) | AI Engineering · APIs · GraphQL | Python, OpenWeather, Strawberry GraphQL, OpenAI API, Gradio, Docker | Grounded conversational weather assistant backed by verified external data |
 | [AI / ML Labs](ai-ml-labs/) | ML Experiments · CV · Distributed ML · Multimodal AI | PyTorch, OpenCV, Spark ML, OpenAI API | Curated smaller experiments that do not require standalone repositories |
 
-## Engineering standards
+## Engineering baseline
 
-The maintained projects are being brought to a common engineering baseline:
+The projects are maintained with a common set of engineering principles:
 
 - Python 3.11+ where appropriate
 - `pyproject.toml`-based packaging
@@ -29,7 +29,7 @@ The maintained projects are being brought to a common engineering baseline:
 - reproducible random seeds where experiments depend on stochastic behavior
 - portable model checkpoints using `state_dict`
 - clear separation between external services and domain logic
-- documentation of methodological changes, limitations, and historical results
+- documentation of methodological changes, limitations, and reported results
 
 The goal is not to add infrastructure for its own sake. Each project uses the level of engineering appropriate to its scope.
 
@@ -39,7 +39,7 @@ The goal is not to add infrastructure for its own sake. Each project uses the le
 
 A compact multimodal RAG system for PDF question answering.
 
-The current architecture keeps chunking, embeddings, retrieval, provenance, and prompting explicit rather than hiding the complete pipeline behind a large framework. Retrieved context is inspectable and answers are grounded in source markers.
+The architecture keeps chunking, embeddings, retrieval, provenance, and prompting explicit rather than hiding the complete pipeline behind a large framework. Retrieved context is inspectable and answers are grounded in source markers.
 
 [Explore the project →](document-ai-assistant/)
 
@@ -57,9 +57,9 @@ Uploaded audio is the stable primary input, while YouTube support is isolated as
 
 ### XAI Perturbation Research
 
-A reproducible modernization of research on learned perturbation functions for explaining image-classifier decisions.
+A reproducible implementation of research on learned perturbation functions for explaining image-classifier decisions.
 
-The implementation preserves the original dense pixel-mask explainer and VGG19-BN research design while separating data preparation, training, evaluation, explanation generation, and checkpointing.
+The project preserves the dense pixel-mask explainer and VGG19-BN research design while separating data preparation, training, evaluation, explanation generation, and checkpointing. The original research thesis is preserved inside the project documentation.
 
 [Explore the research project →](xai-perturbation-research/)
 
@@ -93,28 +93,9 @@ Current labs include:
 
 [Explore the labs →](ai-ml-labs/)
 
-## Source implementations retained during migration
-
-The following directories and notebooks are the source implementations from which the maintained projects above were rebuilt:
-
-| Original source | Maintained destination |
-|---|---|
-| `Turing_Test/` + selected ideas from `Chatbot_Streamlit_OpenAI/` | `document-ai-assistant/` |
-| `Search_Covers/` | `semantic-cover-search/` |
-| `Trabajo de Diploma/` | `xai-perturbation-research/` |
-| `topic detection and polarity calculation/` | `spanish-nlp-toolkit/` |
-| `WeatherAPP/` | `weather-ai-assistant/` |
-| `CartoonizerApp_Streamlit_OpenCV/` | `ai-ml-labs/labs/computer-vision/cartoonizer/` |
-| `Pytorch_Classifier_Cifar10/` | `ai-ml-labs/labs/computer-vision/cifar10-transfer-learning/` |
-| `Images_Classifier/` | `ai-ml-labs/labs/distributed-ml/cats-vs-dogs-spark/` |
-| `Zero_Shot_Example.ipynb` | `ai-ml-labs/labs/multimodal-ai/zero-shot-vision/` |
-| `Demo_Test_Windshield.ipynb` | `ai-ml-labs/labs/multimodal-ai/windshield-inspection/` |
-
-These source implementations are retained during the migration so that the evolution of each project remains traceable. They are **not** the recommended entry point for running the current versions.
-
 ## Running a project
 
-Each maintained project is self-contained and has its own README.
+Each project is self-contained and has its own README.
 
 Typical setup:
 
@@ -133,14 +114,11 @@ Then follow the project-specific instructions.
 
 Some projects require external credentials or optional datasets. Those requirements are documented locally and should be supplied through environment variables rather than committed files.
 
-## Repository migration
+## Portfolio structure
 
-The current repository is an intermediate workspace while the portfolio is being restructured.
+The repository intentionally distinguishes between:
 
-The intended final structure is:
+- **substantial projects**, each with its own architecture, tests, CI, and documentation;
+- **AI / ML Labs**, which groups smaller experiments where a standalone repository would add more noise than signal.
 
-- substantial projects → **standalone repositories**
-- smaller experiments → **AI / ML Labs**
-- GitHub profile README → **portfolio index and professional overview**
-
-Until that extraction is complete, the maintained directories above should be considered the canonical versions inside this repository.
+Selected substantial projects may later be extracted into independent repositories as the public GitHub portfolio is finalized.

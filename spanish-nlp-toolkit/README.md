@@ -2,12 +2,12 @@
 
 A modernized Spanish-language NLP project for **topic clustering** and **lexical sentiment analysis**.
 
-This project rebuilds the original `topic detection and polarity calculation` code from `EMH01/em_projects` into one cohesive, testable toolkit while preserving the original classical NLP approach:
+This project consolidates earlier topic-detection and polarity-analysis experiments into one cohesive, testable toolkit while preserving the classical NLP approach:
 
 - **Topic detection:** spaCy linguistic processing + sentence vectors + K-Means.
 - **Sentiment analysis:** Spanish SentiWordNet-style lexical scores over lemmatized Spanish text.
 
-The original implementation remains untouched while this version is validated.
+This is the maintained implementation of the project.
 
 ## Why this project is useful
 
@@ -183,7 +183,7 @@ Then:
 
 ## Resource provenance
 
-The historical source project contains a Spanish SentiWordNet resource and custom Spanish stop-word lists. This modernization does **not** duplicate those files into the new project yet.
+Earlier experiments used a Spanish SentiWordNet resource and custom Spanish stop-word lists. Those third-party resources are **not** bundled in this maintained project.
 
 Before extracting this project into its final standalone repository, the provenance and redistribution terms of third-party lexical resources should be verified. The code therefore accepts the lexicon path through configuration rather than embedding the resource into the package.
 

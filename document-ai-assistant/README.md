@@ -2,7 +2,7 @@
 
 A compact **multimodal Retrieval-Augmented Generation (RAG)** application for asking grounded questions about PDF documents.
 
-This project is a modernized evolution of earlier experiments in `EMH01/em_projects`, primarily `Turing_Test`, with selected product ideas from `Chatbot_Streamlit_OpenAI`. The new implementation keeps the original focus on document understanding while rebuilding the architecture around explicit, testable components.
+This project evolved from earlier document-QA and chatbot experiments. The current implementation keeps the focus on document understanding while rebuilding the architecture around explicit, testable components.
 
 ## What it demonstrates
 
@@ -115,6 +115,6 @@ This branch is the first modernization pass, not the final showcase. Before extr
 - decide on deployment and license
 - extract this directory into its own public repository once validated
 
-## Origins
+## Project evolution
 
-The original implementation remains untouched in `Turing_Test` and `Chatbot_Streamlit_OpenAI` while this version is being validated.
+The current implementation supersedes the earlier document-QA and chatbot prototypes and is the maintained version of the project.

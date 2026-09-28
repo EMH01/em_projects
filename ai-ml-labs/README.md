@@ -2,7 +2,7 @@
 
 A curated collection of **smaller AI, Machine Learning, and Computer Vision experiments** that are useful to keep, but do not need standalone repositories.
 
-These labs come from earlier work in `EMH01/em_projects` and are being modernized with the same principle used for the larger portfolio projects:
+These labs evolved from smaller experiments and follow the same principle used for the larger portfolio projects:
 
 > preserve the idea and learning value, update the engineering, correct known issues, and never present historical results as freshly reproduced results.
 
@@ -112,15 +112,3 @@ pytest -q
 ```
 
 CI installs only the base + development dependencies. Heavy optional stacks such as PyTorch and Spark are not downloaded for every commit to this secondary experiments repository.
-
-## Original source mapping
-
-| Modern lab | Original source |
-|---|---|
-| OpenCV Cartoonizer | `CartoonizerApp_Streamlit_OpenCV/` |
-| CIFAR-10 Transfer Learning | `Pytorch_Classifier_Cifar10/` |
-| Cats vs Dogs Spark ML | `Images_Classifier/` |
-| Zero-shot Vision | `Zero_Shot_Example.ipynb` |
-| Windshield Inspection | `Demo_Test_Windshield.ipynb` |
-
-The originals remain untouched while the modernized collection is reviewed.
