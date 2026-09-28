@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from types import SimpleNamespace
 
 from weather_assistant.assistant import answer_weather_question, weather_context
@@ -14,7 +14,7 @@ def snapshot():
             latitude=37.18,
             longitude=-3.60,
         ),
-        observed_at_utc=datetime(2026, 9, 28, 10, 0, tzinfo=timezone.utc),
+        observed_at_utc=datetime(2026, 9, 28, 10, 0, tzinfo=UTC),
         timezone_offset_seconds=7200,
         condition="Clear",
         description="clear sky",
