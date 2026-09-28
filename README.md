@@ -26,7 +26,7 @@ My work spans applied machine learning, deep learning, natural language processi
 ## Additional Public Projects
 
 - [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) — curated experiments in PyTorch, OpenCV, Spark ML, and multimodal AI.
-- [**Oposiciones SCS · Auxiliar Administrativo**](https://github.com/EMH01/oposiciones-aux-admin-salud) — React/TypeScript study application with adaptive question selection, PDF parsing, local progress tracking, statistics, and GitHub Pages deployment.
+- [**Oposiciones SCS · Auxiliar Administrativo**](https://github.com/EMH01/oposiciones-aux-admin-salud) — AI-assisted web prototype I specified and iterated around adaptive practice logic, PDF parsing, local progress tracking, statistics, and GitHub Pages deployment.
 
 ---
 
@@ -78,5 +78,5 @@ I treat this as a complementary creative/technical direction rather than my prim
 
 ## Core Stack
 
-**Python · PyTorch · scikit-learn · spaCy · OpenAI API · Azure OpenAI · FastAPI · Streamlit · Gradio · FAISS · OpenCV · Spark ML · GraphQL · React · TypeScript · Docker · GitHub Actions**
+**Python · PyTorch · scikit-learn · spaCy · OpenAI API · Azure OpenAI · FastAPI · Streamlit · Gradio · FAISS · OpenCV · Spark ML · GraphQL · Docker · GitHub Actions**
 
