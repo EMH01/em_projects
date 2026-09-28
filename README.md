@@ -19,7 +19,14 @@ My work spans applied machine learning, deep learning, natural language processi
 | [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) | Explainable AI · Research | Learned perturbation masks for image classifiers, VGG19-BN, reproducible research pipeline |
 | [**Spanish NLP Toolkit**](https://github.com/EMH01/spanish-nlp-toolkit) | NLP · Topic Modeling · Sentiment | spaCy, deterministic K-Means clustering, lexical sentiment analysis, FastAPI |
 | [**Weather AI Assistant**](https://github.com/EMH01/weather-ai-assistant) | AI Engineering · APIs · GraphQL | Grounded LLM responses from verified weather data, GraphQL, Gradio, Docker |
-| [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) | ML Experiments | PyTorch, OpenCV, Spark ML, multimodal prompting, curated smaller experiments |
+| [**Personal Wellness AI Assistant**](https://github.com/EMH01/Personal_Trainer) | Applied AI · Azure OpenAI · Streamlit | Local-first wellness planning, private user configuration, optional Document Intelligence |
+
+---
+
+## Additional Public Projects
+
+- [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) — curated experiments in PyTorch, OpenCV, Spark ML, and multimodal AI.
+- [**Oposiciones SCS · Auxiliar Administrativo**](https://github.com/EMH01/oposiciones-aux-admin-salud) — React/TypeScript study application with adaptive question selection, PDF parsing, local progress tracking, statistics, and GitHub Pages deployment.
 
 ---
 
