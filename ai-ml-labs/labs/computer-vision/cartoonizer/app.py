@@ -4,7 +4,6 @@ import streamlit as st
 
 from ai_ml_labs.cartoonizer import cartoonize
 
-
 st.set_page_config(page_title="OpenCV Cartoonizer", page_icon="🎨")
 st.title("🎨 OpenCV Cartoonizer")
 st.caption("A small classical-computer-vision demo using edge extraction and bilateral filtering.")
