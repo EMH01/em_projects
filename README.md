@@ -78,5 +78,5 @@ I treat this as a complementary creative/technical direction rather than my prim
 
 ## Core Stack
 
-**Python · PyTorch · scikit-learn · spaCy · OpenAI API · FastAPI · Streamlit · Gradio · FAISS · OpenCV · Spark ML · GraphQL · Docker · GitHub Actions**
+**Python · PyTorch · scikit-learn · spaCy · OpenAI API · Azure OpenAI · FastAPI · Streamlit · Gradio · FAISS · OpenCV · Spark ML · GraphQL · React · TypeScript · Docker · GitHub Actions**
 
