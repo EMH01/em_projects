@@ -8,7 +8,7 @@ city string city that the query ask about its weather data
 const fetch = require('node-fetch');
 
 async function weather_retriever(city) {
-    const OPENWEATHER_API_KEY = 'eb3adb79c6dba0cf3ceb1e1f43d85aa1';
+    const OPENWEATHER_API_KEY = process.env.OPENWEATHER_API_KEY;
       const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPENWEATHER_API_KEY}&units=metric`;
     
     const options = {
