@@ -2,7 +2,12 @@ import argparse
 from pathlib import Path
 
 from xai_perturbation.checkpoints import save_state_dict
-from xai_perturbation.data import imagefolder_splits, legacy_transform, make_loader, vgg_transform
+from xai_perturbation.data import (
+    imagefolder_splits,
+    legacy_transform,
+    make_loader,
+    vgg_transform,
+)
 from xai_perturbation.models import build_vgg19_classifier
 from xai_perturbation.training import choose_device, train_classifier
 
