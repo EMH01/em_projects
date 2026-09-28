@@ -93,9 +93,9 @@ Current labs include:
 
 [Explore the labs →](ai-ml-labs/)
 
-## Historical source implementations
+## Source implementations retained during migration
 
-The following directories and notebooks are the earlier implementations from which the maintained projects above were rebuilt:
+The following directories and notebooks are the source implementations from which the maintained projects above were rebuilt:
 
 | Original source | Maintained destination |
 |---|---|
