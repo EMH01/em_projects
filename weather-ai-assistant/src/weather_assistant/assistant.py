@@ -4,7 +4,6 @@ from typing import Any
 from .models import HistoricalWeatherDay, WeatherSnapshot
 from .time_utils import local_time_from_offset
 
-
 SYSTEM_INSTRUCTIONS = """You are a weather assistant.
 Answer only weather-related questions using the supplied weather context.
 Do not invent measurements or forecasts that are not present in the context.
@@ -16,8 +15,9 @@ def weather_context(
     snapshot: WeatherSnapshot,
     historical: HistoricalWeatherDay | None = None,
 ) -> dict[str, object]:
-    local_observed = snapshot.observed_at_utc.astimezone(
-        local_time_from_offset(snapshot.timezone_offset_seconds).tzinfo
+    local_observed = local_time_from_offset(
+        snapshot.timezone_offset_seconds,
+        now=snapshot.observed_at_utc,
     )
     context: dict[str, object] = {
         "current": {
