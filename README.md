@@ -1,97 +1,146 @@
-# EM Projects - Repositorio de Proyectos de Machine Learning e IA
+# AI & Machine Learning Projects
 
-## ⚠️ Aviso Importante
+A curated collection of **Data Science, Machine Learning, and AI Engineering projects** covering document intelligence, semantic search, explainable AI, NLP, computer vision, multimodal systems, and applied AI applications.
 
-Este repositorio contiene proyectos desarrollados hace algún tiempo. **Las tecnologías, librerías y estrategias utilizadas pueden haber evolucionado considerablemente** desde su creación. Algunas dependencias podrían estar desactualizadas.
+This repository is currently being reorganized into a cleaner portfolio structure. The projects listed first below are the **maintained implementations** and are the versions intended for continued development and eventual extraction into standalone repositories.
 
-## 📁 Descripción de Proyectos
+## Maintained projects
 
-Este repositorio contiene una colección de proyectos simples de inteligencia artificial, machine learning y desarrollo de aplicaciones organizados por carpetas:
+| Project | Area | Main technologies | Focus |
+|---|---|---|---|
+| [Document AI Assistant](document-ai-assistant/) | RAG · Document AI · Multimodal AI | Python, OpenAI API, PyMuPDF, NumPy, Streamlit | Grounded question answering over PDFs with semantic retrieval and optional image understanding |
+| [Semantic Cover Search](semantic-cover-search/) | Semantic Search · Audio AI | Python, transcription, embeddings, FAISS, Gradio | Discover covers and lyrically similar performances through transcription and vector similarity |
+| [XAI Perturbation Research](xai-perturbation-research/) | Explainable AI · Computer Vision · Research | PyTorch, TorchVision, VGG19-BN | Reproducible implementation of learned perturbation-based image explanations |
+| [Spanish NLP Toolkit](spanish-nlp-toolkit/) | NLP · Topic Modeling · Sentiment Analysis | spaCy, scikit-learn, FastAPI | Deterministic Spanish topic clustering and lexical sentiment analysis |
+| [Weather AI Assistant](weather-ai-assistant/) | AI Engineering · APIs · GraphQL | Python, OpenWeather, Strawberry GraphQL, OpenAI API, Gradio, Docker | Grounded conversational weather assistant backed by verified external data |
+| [AI / ML Labs](ai-ml-labs/) | ML Experiments · CV · Distributed ML · Multimodal AI | PyTorch, OpenCV, Spark ML, OpenAI API | Curated smaller experiments that do not require standalone repositories |
 
-### 🎨 **CartoonizerApp_Streamlit_OpenCV**
-Aplicación web desarrollada con Streamlit que aplica efectos de dibujo animado a imágenes utilizando OpenCV. Incluye interfaz simple para cargar imágenes y procesarlas.
-- **Tecnologías**: Streamlit, OpenCV, NumPy
-- **Funcionalidad**: Conversión de imágenes a estilo cartoon/dibujo animado
+## Engineering standards
 
-### 🤖 **Chatbot_Streamlit_OpenAI**
-Chatbot interactivo que utiliza la API de OpenAI con capacidad de procesar documentos PDF/TXT. Incluye sistema de autenticación y memoria persistente mediante base de datos Supabase.
-- **Tecnologías**: Streamlit, OpenAI API, Supabase, Sumy NLP
-- **Funcionalidad**: Chat conversacional con documentos, análisis de contenido
+The maintained projects are being brought to a common engineering baseline:
 
-### 🐱🐶 **Images_Classifier**
-Notebook que demuestra el entrenamiento de un modelo clasificador de imágenes para distinguir entre gatos y perros, implementado en Google Colab.
-- **Tecnologías**: PySpark, Pillow, NumPy, Google Colab
-- **Funcionalidad**: Clasificación binaria de imágenes
+- Python 3.11+ where appropriate
+- `pyproject.toml`-based packaging
+- explicit configuration through environment variables
+- `.env.example` instead of committed credentials
+- automated tests for core logic
+- Ruff linting
+- GitHub Actions CI
+- reproducible random seeds where experiments depend on stochastic behavior
+- portable model checkpoints using `state_dict`
+- clear separation between external services and domain logic
+- documentation of methodological changes, limitations, and historical results
 
-### 🏆 **Pytorch_Classifier_Cifar10**
-Implementación de clasificación del dataset CIFAR-10 utilizando el modelo VGG19 preentrenado con PyTorch. Incluye entrenamiento, evaluación y métricas de rendimiento.
-- **Tecnologías**: PyTorch, Torchvision, TorchMetrics, VGG19
-- **Funcionalidad**: Clasificación de 10 categorías de imágenes
-- **Resultados**: 94.41% precisión en evaluación, 93.96% en pruebas
+The goal is not to add infrastructure for its own sake. Each project uses the level of engineering appropriate to its scope.
 
-### 🎵 **Search_Covers**
-Aplicación para búsqueda de covers musicales similares mediante análisis de letras extraídas de videos de YouTube. Utiliza embeddings y búsqueda por similitud.
-- **Tecnologías**: Gradio, OpenAI Whisper, SentenceTransformers, FAISS, PyTubeFix
-- **Funcionalidad**: Extracción de letras, búsqueda de similitudes, gestión de base de datos
+## Project highlights
 
-### 🌤️ **WeatherAPP**
-Asistente virtual para consultas meteorológicas desarrollado con FlowiseAI y desplegado en HuggingFace Spaces. Incluye interfaz de chat y autenticación.
-- **Tecnologías**: Python, FlowiseAI, HuggingFace, Gradio, GraphQL, Docker
-- **Funcionalidad**: Consultas meteorológicas actuales y pronósticos
+### Document AI Assistant
 
-### 🔬 **Trabajo de Diploma**
-Investigación sobre Inteligencia Artificial Explicable enfocada en la interpretación de decisiones de modelos de clasificación de imágenes como VGG19, utilizando funciones de perturbación.
-- **Tecnologías**: Redes neuronales, funciones de perturbación, Food101 dataset
-- **Funcionalidad**: Generación de mapas de relevancia para explicabilidad de modelos
+A compact multimodal RAG system for PDF question answering.
 
-### 📊 **topic detection and polarity calculation**
-Paquete de componentes de Procesamiento de Lenguaje Natural (NLP) para análisis de sentimientos y detección de tópicos en textos en español.
-- **Tecnologías**: Python, K-means clustering, SpanishSentiWordNet
-- **Funcionalidad**: Análisis de polaridad, agrupamiento de tópicos, procesamiento de texto
+The current architecture keeps chunking, embeddings, retrieval, provenance, and prompting explicit rather than hiding the complete pipeline behind a large framework. Retrieved context is inspectable and answers are grounded in source markers.
 
-### 🧠 **Turing_Test**
-Sistema conversacional DocuGenius Assistant basado en documentos, construido con Streamlit, LangChain y modelos GPT de OpenAI para casos prácticos de pruebas de Turing.
-- **Tecnologías**: Streamlit, LangChain, OpenAI GPT, Python
-- **Funcionalidad**: Asistente conversacional inteligente basado en documentos
+[Explore the project →](document-ai-assistant/)
 
-## 📋 **Archivos Individuales**
+### Semantic Cover Search
 
-### 📓 **Demo_Test_Windshield.ipynb**
-Notebook de demostración para pruebas y experimentos diversos.
+A semantic audio-search pipeline built around:
 
-### 🎯 **Zero_Shot_Example.ipynb**
-Ejemplo práctico de implementación de técnicas de Zero Shot Learning.
+```text
+audio → transcription → normalized text → embeddings → FAISS → similarity ranking
+```
 
-## 🚀 Instrucciones Generales de Uso
+Uploaded audio is the stable primary input, while YouTube support is isolated as an optional adapter.
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/EMH01/em_projects.git
-   cd em_projects
-   ```
+[Explore the project →](semantic-cover-search/)
 
-2. **Navegar al proyecto específico:**
-   ```bash
-   cd [nombre_del_proyecto]
-   ```
+### XAI Perturbation Research
 
-3. **Instalar dependencias:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *Nota: Verificar compatibilidad de versiones antes de la instalación*
+A reproducible modernization of research on learned perturbation functions for explaining image-classifier decisions.
 
-4. **Seguir las instrucciones específicas** en el README de cada proyecto.
+The implementation preserves the original dense pixel-mask explainer and VGG19-BN research design while separating data preparation, training, evaluation, explanation generation, and checkpointing.
 
-## ⚙️ Consideraciones Técnicas
+[Explore the research project →](xai-perturbation-research/)
 
-- **Python**: La mayoría de proyectos requieren Python 3.7+
-- **Entornos**: Algunos proyectos están optimizados para Google Colab
-- **APIs**: Varios proyectos requieren claves de API (OpenAI, Supabase, etc.)
-- **Dependencias**: Revisar compatibilidad con versiones actuales de librerías
+### Spanish NLP Toolkit
 
-## 🔄 Estado de Mantenimiento
+A transparent classical NLP baseline for Spanish text.
 
-Este repositorio se mantiene como archivo histórico de proyectos que sirvieron para la introducción en proyectos prácticos de AI y ML. 
+It combines spaCy linguistic processing, sentence embeddings, deterministic K-Means clustering, and Spanish SentiWordNet-style lexical sentiment analysis behind a FastAPI interface.
 
-*Repositorio creado por EMH01 - Colección de proyectos simples e investigaciones sobre IA y Machine Learning*
+[Explore the project →](spanish-nlp-toolkit/)
+
+### Weather AI Assistant
+
+An applied AI system combining external weather data, GraphQL, optional historical data, and grounded LLM responses.
+
+The application resolves locations through geocoding, retrieves verified measurements, and only then passes structured context to the language model.
+
+[Explore the project →](weather-ai-assistant/)
+
+### AI / ML Labs
+
+A curated home for smaller experiments that are useful to preserve without turning every notebook or prototype into an independent repository.
+
+Current labs include:
+
+- OpenCV Cartoonizer
+- CIFAR-10 transfer learning with VGG19-BN
+- Cats vs Dogs with Spark ML
+- Zero-shot multimodal vision
+- reference-guided windshield inspection
+
+[Explore the labs →](ai-ml-labs/)
+
+## Source implementations retained during migration
+
+The following directories and notebooks are the source implementations from which the maintained projects above were rebuilt:
+
+| Original source | Maintained destination |
+|---|---|
+| `Turing_Test/` + selected ideas from `Chatbot_Streamlit_OpenAI/` | `document-ai-assistant/` |
+| `Search_Covers/` | `semantic-cover-search/` |
+| `Trabajo de Diploma/` | `xai-perturbation-research/` |
+| `topic detection and polarity calculation/` | `spanish-nlp-toolkit/` |
+| `WeatherAPP/` | `weather-ai-assistant/` |
+| `CartoonizerApp_Streamlit_OpenCV/` | `ai-ml-labs/labs/computer-vision/cartoonizer/` |
+| `Pytorch_Classifier_Cifar10/` | `ai-ml-labs/labs/computer-vision/cifar10-transfer-learning/` |
+| `Images_Classifier/` | `ai-ml-labs/labs/distributed-ml/cats-vs-dogs-spark/` |
+| `Zero_Shot_Example.ipynb` | `ai-ml-labs/labs/multimodal-ai/zero-shot-vision/` |
+| `Demo_Test_Windshield.ipynb` | `ai-ml-labs/labs/multimodal-ai/windshield-inspection/` |
+
+These source implementations are retained during the migration so that the evolution of each project remains traceable. They are **not** the recommended entry point for running the current versions.
+
+## Running a project
+
+Each maintained project is self-contained and has its own README.
+
+Typical setup:
+
+```bash
+git clone https://github.com/EMH01/em_projects.git
+cd em_projects/<project>
+
+python -m venv .venv
+source .venv/bin/activate       # macOS/Linux
+# .venv\Scripts\activate      # Windows
+
+pip install -e ".[dev]"
+```
+
+Then follow the project-specific instructions.
+
+Some projects require external credentials or optional datasets. Those requirements are documented locally and should be supplied through environment variables rather than committed files.
+
+## Repository migration
+
+The current repository is an intermediate workspace while the portfolio is being restructured.
+
+The intended final structure is:
+
+- substantial projects → **standalone repositories**
+- smaller experiments → **AI / ML Labs**
+- GitHub profile README → **portfolio index and professional overview**
+
+Until that extraction is complete, the maintained directories above should be considered the canonical versions inside this repository.
