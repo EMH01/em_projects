@@ -65,7 +65,12 @@ def search_upload(audio_path: str | None, top_k: int):
         raise gr.Error("Index at least one song before searching.")
     path = Path(audio_path)
     client = get_client()
-    transcript = transcribe_audio(client, path.read_bytes(), path.name, settings.transcription_model)
+    transcript = transcribe_audio(
+        client,
+        path.read_bytes(),
+        path.name,
+        settings.transcription_model,
+    )
     embedding = embed_text(client, transcript, settings.embedding_model)
     return format_results(catalog.search(embedding, int(top_k)))
 
