@@ -10,10 +10,11 @@ My work spans applied machine learning, deep learning, natural language processi
 
 ---
 
-## Selected Projects
+## Featured Projects
 
 | Project | Focus | Highlights |
 |---|---|---|
+| [**Loquia**](https://github.com/EMH01/transcribe-offline-android) | On-device AI · Android · Speech + LLM | Private offline transcription, writing assistance and local chat on Android using Kotlin, Jetpack Compose and native inference. **[Download official APK v0.4.4](https://github.com/EMH01/transcribe-offline-android/releases/download/v0.4.4/Loquia-0.4.4-official.apk)** |
 | [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) | RAG · Document AI · Multimodal AI | Grounded PDF question answering, semantic retrieval, optional image understanding, inspectable context |
 | [**Semantic Cover Search**](https://github.com/EMH01/semantic-cover-search) | Semantic Search · Audio AI | Audio transcription, embeddings, FAISS similarity search, optional YouTube adapter |
 | [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) | Explainable AI · Research | Learned perturbation masks for image classifiers, VGG19-BN, reproducible research pipeline |
@@ -23,10 +24,22 @@ My work spans applied machine learning, deep learning, natural language processi
 
 ---
 
-## Additional Public Projects
+## All Public Projects
 
-- [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) — curated experiments in PyTorch, OpenCV, Spark ML, and multimodal AI.
-- [**Oposiciones SCS · Auxiliar Administrativo**](https://github.com/EMH01/oposiciones-aux-admin-salud) — AI-assisted web prototype I specified and iterated around adaptive practice logic, PDF parsing, local progress tracking, statistics, and GitHub Pages deployment.
+### AI systems, research & applied ML
+
+- [**Loquia**](https://github.com/EMH01/transcribe-offline-android) — fully offline Android voice transcription, writing assistance and local chat with on-device inference. **[APK v0.4.4](https://github.com/EMH01/transcribe-offline-android/releases/download/v0.4.4/Loquia-0.4.4-official.apk)** · [Releases](https://github.com/EMH01/transcribe-offline-android/releases)
+- [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) — multimodal RAG over PDFs with explicit retrieval, provenance and grounded generation.
+- [**Semantic Cover Search**](https://github.com/EMH01/semantic-cover-search) — semantic music search using audio transcription, embeddings and FAISS.
+- [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — reproducible explainability research for image classifiers with learned perturbation masks.
+- [**Spanish NLP Toolkit**](https://github.com/EMH01/spanish-nlp-toolkit) — Spanish topic clustering and lexical sentiment analysis behind a FastAPI interface.
+- [**Weather AI Assistant**](https://github.com/EMH01/weather-ai-assistant) — grounded weather assistant integrating verified external data, GraphQL and LLM responses.
+- [**Personal Wellness AI Assistant**](https://github.com/EMH01/personal-wellness-ai-assistant) — local-first Streamlit assistant using Azure OpenAI and optional Azure Document Intelligence.
+- [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) — curated experiments in PyTorch, OpenCV, Spark ML and multimodal AI.
+
+### Product prototyping
+
+- [**Oposiciones SCS · Auxiliar Administrativo**](https://github.com/EMH01/oposiciones-aux-admin-salud) — AI-assisted web prototype I specified and iterated around adaptive practice logic, PDF parsing, local progress tracking, statistics and GitHub Pages deployment.
 
 ---
 
@@ -37,6 +50,7 @@ My work spans applied machine learning, deep learning, natural language processi
 - **Computer Vision** — classification, transfer learning, image processing, multimodal reasoning
 - **Explainable AI** — perturbation-based explanations and research-oriented evaluation
 - **LLM Applications** — RAG, grounded generation, multimodal document understanding, tool-backed assistants
+- **On-device AI** — local speech recognition, compact LLM inference and privacy-oriented applications
 - **AI Engineering** — APIs, modular architectures, testing, CI, Docker, external-service integration
 
 ---
@@ -49,12 +63,11 @@ Typical practices include:
 
 - reproducible experiments and explicit random seeds
 - typed, modular Python code
-- `pyproject.toml`-based environments
-- automated tests for core logic
-- Ruff linting and GitHub Actions CI
+- automated tests and CI
 - clear separation between domain logic and external services
 - portable model checkpoints and explicit configuration
-- documentation of assumptions, methodological changes, limitations, and historical results
+- documentation of assumptions, methodological changes, limitations and historical results
+- privacy-aware local inference where it fits the product
 
 ---
 
@@ -78,5 +91,4 @@ I treat this as a complementary creative/technical direction rather than my prim
 
 ## Core Stack
 
-**Python · PyTorch · scikit-learn · spaCy · OpenAI API · Azure OpenAI · FastAPI · Streamlit · Gradio · FAISS · OpenCV · Spark ML · GraphQL · Docker · GitHub Actions**
-
+**Python · PyTorch · scikit-learn · spaCy · OpenAI API · Azure OpenAI · FastAPI · Streamlit · Gradio · FAISS · OpenCV · Spark ML · GraphQL · Kotlin · Jetpack Compose · Android · JNI · Docker · GitHub Actions**
