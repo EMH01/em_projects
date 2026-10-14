@@ -36,6 +36,7 @@ My work spans applied machine learning, deep learning, natural language processi
 - [**Weather AI Assistant**](https://github.com/EMH01/weather-ai-assistant) — grounded weather assistant integrating verified external data, GraphQL and LLM responses.
 - [**Personal Wellness AI Assistant**](https://github.com/EMH01/personal-wellness-ai-assistant) — local-first Streamlit assistant using Azure OpenAI and optional Azure Document Intelligence.
 - [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) — curated experiments in PyTorch, OpenCV, Spark ML and multimodal AI.
+- [**Reinforcement Learning for Electricity Markets**](https://github.com/EMH01/reinforcement-learning-electricity-markets) — public working paper on RL environment design, temporal backtesting, risk, execution realism and the Iberian electricity-market context.
 
 ### Product prototyping
 
@@ -73,11 +74,12 @@ Typical practices include:
 
 ## Research
 
-My Computer Science research explored **Explainable Artificial Intelligence for image classification**, using a learned perturbation network to generate pixel-level relevance masks while preserving classifier behavior.
+My public research work currently covers two complementary AI directions:
 
-The modernized implementation and original thesis artifact are available in:
+- [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — my Computer Science research on learned perturbation-based explanations for image classifiers, including the modernized implementation and original thesis artifact.
+- [**Reinforcement Learning for Electricity Markets**](https://github.com/EMH01/reinforcement-learning-electricity-markets) — a public working paper and narrative technical review focused on RL environment design, point-in-time data, reward formulation, execution realism, temporal backtesting, risk and the Iberian market context.
 
-[**xai-perturbation-research**](https://github.com/EMH01/xai-perturbation-research)
+The electricity-markets review is explicitly based on scientific literature, official documentation and open sources; it contains no client- or company-specific data, code, rules, metrics, architectures or non-public results.
 
 ---
 
