@@ -10,37 +10,18 @@ My work spans applied machine learning, deep learning, natural language processi
 
 ---
 
-## Featured Projects
+## Projects
 
 | Project | Focus | Highlights |
 |---|---|---|
 | [**Loquia**](https://github.com/EMH01/transcribe-offline-android) | On-device AI · Android · Speech + LLM | Private offline transcription, writing assistance and local chat on Android using Kotlin, Jetpack Compose and native inference. **[Download the latest official APK](https://github.com/EMH01/transcribe-offline-android/releases)** |
 | [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) | RAG · Document AI · Multimodal AI | Grounded PDF question answering, semantic retrieval, optional image understanding, inspectable context |
 | [**Semantic Cover Search**](https://github.com/EMH01/semantic-cover-search) | Semantic Search · Audio AI | Audio transcription, embeddings, FAISS similarity search, optional YouTube adapter |
-| [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) | Explainable AI · Research | Learned perturbation masks for image classifiers, VGG19-BN, reproducible research pipeline |
 | [**Spanish NLP Toolkit**](https://github.com/EMH01/spanish-nlp-toolkit) | NLP · Topic Modeling · Sentiment | spaCy, deterministic K-Means clustering, lexical sentiment analysis, FastAPI |
 | [**Weather AI Assistant**](https://github.com/EMH01/weather-ai-assistant) | AI Engineering · APIs · GraphQL | Grounded LLM responses from verified weather data, GraphQL, Gradio, Docker |
 | [**Personal Wellness AI Assistant**](https://github.com/EMH01/personal-wellness-ai-assistant) | Applied AI · Azure OpenAI · Streamlit | Local-first wellness planning, private user configuration, optional Document Intelligence |
-
----
-
-## All Public Projects
-
-### AI systems, research & applied ML
-
-- [**Loquia**](https://github.com/EMH01/transcribe-offline-android) — fully offline Android voice transcription, writing assistance and local chat with on-device inference. **[Download the latest official APK](https://github.com/EMH01/transcribe-offline-android/releases)**
-- [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) — multimodal RAG over PDFs with explicit retrieval, provenance and grounded generation.
-- [**Semantic Cover Search**](https://github.com/EMH01/semantic-cover-search) — semantic music search using audio transcription, embeddings and FAISS.
-- [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — reproducible explainability research for image classifiers with learned perturbation masks.
-- [**Spanish NLP Toolkit**](https://github.com/EMH01/spanish-nlp-toolkit) — Spanish topic clustering and lexical sentiment analysis behind a FastAPI interface.
-- [**Weather AI Assistant**](https://github.com/EMH01/weather-ai-assistant) — grounded weather assistant integrating verified external data, GraphQL and LLM responses.
-- [**Personal Wellness AI Assistant**](https://github.com/EMH01/personal-wellness-ai-assistant) — local-first Streamlit assistant using Azure OpenAI and optional Azure Document Intelligence.
-- [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) — curated experiments in PyTorch, OpenCV, Spark ML and multimodal AI.
-- [**Reinforcement Learning for Electricity Markets**](https://github.com/EMH01/reinforcement-learning-electricity-markets) — completed technical research review on RL environment design, temporal backtesting, risk, execution realism and the Iberian electricity-market context.
-
-### Product prototyping
-
-- [**Oposiciones SCS · Auxiliar Administrativo**](https://github.com/EMH01/oposiciones-aux-admin-salud) — AI-assisted web prototype I specified and iterated around adaptive practice logic, PDF parsing, local progress tracking, statistics and GitHub Pages deployment.
+| [**AI / ML Labs**](https://github.com/EMH01/ai-ml-labs) | Applied ML · Computer Vision · Distributed ML | Curated experiments in PyTorch, OpenCV, Spark ML and multimodal AI |
+| [**Oposiciones SCS · Auxiliar Administrativo**](https://github.com/EMH01/oposiciones-aux-admin-salud) | AI-assisted Prototyping · Web App | Adaptive practice logic, PDF parsing, local progress tracking, statistics and GitHub Pages deployment |
 
 ---
 
@@ -79,7 +60,6 @@ My public research work currently covers two complementary AI directions:
 - [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — my Computer Science research on learned perturbation-based explanations for image classifiers, including the modernized implementation and original thesis artifact.
 - [**Reinforcement Learning for Electricity Markets**](https://github.com/EMH01/reinforcement-learning-electricity-markets) — a completed technical research review focused on RL environment design, point-in-time data, reward formulation, execution realism, temporal backtesting, risk and the Iberian market context.
 
-The electricity-markets review is explicitly based on scientific literature, official documentation and open sources; it contains no client- or company-specific data, code, rules, metrics, architectures or non-public results.
 
 ---
 
