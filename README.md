@@ -14,7 +14,7 @@ My work spans applied machine learning, deep learning, natural language processi
 
 | Project | Focus | Highlights |
 |---|---|---|
-| [**Loquia**](https://github.com/EMH01/transcribe-offline-android) | On-device AI · Android · Speech + LLM | Private offline transcription, writing assistance and local chat on Android using Kotlin, Jetpack Compose and native inference. **[Download official APK v0.4.4](https://github.com/EMH01/transcribe-offline-android/releases/download/v0.4.4/Loquia-0.4.4-official.apk)** |
+| [**Loquia**](https://github.com/EMH01/transcribe-offline-android) | On-device AI · Android · Speech + LLM | Private offline transcription, writing assistance and local chat on Android using Kotlin, Jetpack Compose and native inference. **[Download the latest official APK](https://github.com/EMH01/transcribe-offline-android/releases)** |
 | [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) | RAG · Document AI · Multimodal AI | Grounded PDF question answering, semantic retrieval, optional image understanding, inspectable context |
 | [**Semantic Cover Search**](https://github.com/EMH01/semantic-cover-search) | Semantic Search · Audio AI | Audio transcription, embeddings, FAISS similarity search, optional YouTube adapter |
 | [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) | Explainable AI · Research | Learned perturbation masks for image classifiers, VGG19-BN, reproducible research pipeline |
@@ -28,7 +28,7 @@ My work spans applied machine learning, deep learning, natural language processi
 
 ### AI systems, research & applied ML
 
-- [**Loquia**](https://github.com/EMH01/transcribe-offline-android) — fully offline Android voice transcription, writing assistance and local chat with on-device inference. **[APK v0.4.4](https://github.com/EMH01/transcribe-offline-android/releases/download/v0.4.4/Loquia-0.4.4-official.apk)** · [Releases](https://github.com/EMH01/transcribe-offline-android/releases)
+- [**Loquia**](https://github.com/EMH01/transcribe-offline-android) — fully offline Android voice transcription, writing assistance and local chat with on-device inference. **[Download the latest official APK](https://github.com/EMH01/transcribe-offline-android/releases)**
 - [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) — multimodal RAG over PDFs with explicit retrieval, provenance and grounded generation.
 - [**Semantic Cover Search**](https://github.com/EMH01/semantic-cover-search) — semantic music search using audio transcription, embeddings and FAISS.
 - [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — reproducible explainability research for image classifiers with learned perturbation masks.
