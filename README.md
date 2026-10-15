@@ -57,7 +57,7 @@ Typical practices include:
 
 My public research work currently covers two complementary AI directions:
 
-- [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — my Computer Science research on learned perturbation-based explanations for image classifiers, including the modernized implementation and original thesis artifact.
+- [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — my **2023 Computer Science Diploma Thesis** on learned perturbation-based explanations for image classifiers, preserved with the original thesis artifact and a modernized reproducible implementation. The repository clearly separates the historical experimental conclusions from a possible continuation under current XAI evaluation methods.
 - [**Reinforcement Learning for Electricity Markets**](https://github.com/EMH01/reinforcement-learning-electricity-markets) — completed technical research review on RL environment design, point-in-time data, simulation, temporal evaluation, risk and reproducibility for electricity-market applications. **[Zenodo publication](https://doi.org/10.5281/zenodo.23375412)** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23375412.svg)](https://doi.org/10.5281/zenodo.23375412)
 
 
