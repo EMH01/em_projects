@@ -55,7 +55,7 @@ Typical practices include:
 
 ## Research
 
-- [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — my **2023 Computer Science Diploma Thesis** on learned perturbation-based explanations for image classifiers, preserved with the original thesis artifact and a modernized reproducible implementation. The repository clearly separates the historical experimental conclusions from a possible continuation under current XAI evaluation methods.
+- [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — my **2023 Computer Science Diploma Thesis** on a learned perturbation-based approach for explaining image-classification models. The repository preserves the original thesis artifact and presents the same implementation in a clearer modular structure; it does not claim later experiments or a continuation of the 2023 research.
 - [**Reinforcement Learning for Electricity Markets**](https://github.com/EMH01/reinforcement-learning-electricity-markets) — completed technical research review on RL environment design, point-in-time data, simulation, temporal evaluation, risk and reproducibility for electricity-market applications. **[Zenodo publication](https://doi.org/10.5281/zenodo.23375412)** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23375412.svg)](https://doi.org/10.5281/zenodo.23375412)
 
 
