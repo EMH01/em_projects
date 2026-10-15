@@ -58,15 +58,6 @@ Typical practices include:
 - [**XAI Perturbation Research**](https://github.com/EMH01/xai-perturbation-research) — my **2023 Computer Science Diploma Thesis** on a learned perturbation-based approach for explaining image-classification models. The repository preserves the original thesis artifact and presents the same implementation in a clearer modular structure; it does not claim later experiments or a continuation of the 2023 research.
 - [**Reinforcement Learning for Electricity Markets**](https://github.com/EMH01/reinforcement-learning-electricity-markets) — completed technical research review on RL environment design, point-in-time data, simulation, temporal evaluation, risk and reproducibility for electricity-market applications. **[Zenodo publication](https://doi.org/10.5281/zenodo.23375412)** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23375412.svg)](https://doi.org/10.5281/zenodo.23375412)
 
-
----
-
-## Currently Exploring
-
-Alongside my core work in AI and Data Science, I am currently taking my **first steps into game development and interactive narrative**, working with Godot as part of a collaborative game-jam project.
-
-I treat this as a complementary creative/technical direction rather than my primary professional specialization.
-
 ---
 
 ## Core Stack
