@@ -8,6 +8,17 @@ I am a Computer Science graduate focused on **Data Science and Artificial Intell
 
 My work spans applied machine learning, deep learning, natural language processing, computer vision, explainability, multimodal systems, and LLM-based applications. I am especially interested in turning experimental AI ideas into **reproducible, testable, and well-engineered systems**.
 
+
+---
+
+## 🌐 Featured live project — Document AI Assistant
+
+**From PDF to verifiable answers.** A deployed, bilingual RAG application for scanned and digital documents, combining Docling OCR, multilingual semantic retrieval, local Qwen GGUF inference and a source-linked PDF viewer.
+
+**[🚀 Try the live Streamlit demo](https://emh-document-ai-assistant.streamlit.app/)** · **[View repository & architecture](https://github.com/EMH01/document-ai-assistant)**
+
+*Runs on CPU with open-weight models; public beta performance varies with document size. Please use non-sensitive PDFs.*
+
 ---
 
 ## Projects
@@ -15,7 +26,7 @@ My work spans applied machine learning, deep learning, natural language processi
 | Project | Focus | Highlights |
 |---|---|---|
 | [**Loquia**](https://github.com/EMH01/transcribe-offline-android) | On-device AI · Android · Speech + LLM | Private offline transcription, writing assistance and local chat on Android using Kotlin, Jetpack Compose and native inference. **[Download the latest official APK](https://github.com/EMH01/transcribe-offline-android/releases)** |
-| [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) | RAG · Document AI · Multimodal AI | Grounded PDF question answering, semantic retrieval, optional image understanding, inspectable context |
+| [**Document AI Assistant**](https://github.com/EMH01/document-ai-assistant) · **[Live demo ↗](https://emh-document-ai-assistant.streamlit.app/)** | RAG · Document AI · OCR · Local LLMs | Deployed bilingual PDF Q&A with semantic retrieval, page-level evidence, scanned-document OCR, and inspectable sources |
 | [**Semantic Cover Search**](https://github.com/EMH01/semantic-cover-search) | Semantic Search · Audio AI | Audio transcription, embeddings, FAISS similarity search, optional YouTube adapter |
 | [**Spanish NLP Toolkit**](https://github.com/EMH01/spanish-nlp-toolkit) | NLP · Topic Modeling · Sentiment | spaCy, deterministic K-Means clustering, lexical sentiment analysis, FastAPI |
 | [**Weather AI Assistant**](https://github.com/EMH01/weather-ai-assistant) | AI Engineering · APIs · GraphQL | Grounded LLM responses from verified weather data, GraphQL, Gradio, Docker |
